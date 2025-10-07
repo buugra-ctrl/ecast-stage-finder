@@ -44,7 +44,7 @@ const MemberTypes = () => {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">
-            Join as a Member
+            Hemen Üye Ol
           </h2>
           <p className="text-lg text-muted-foreground">
             Whether you're a casting director, actor, or agent, ecast has the perfect membership for you
