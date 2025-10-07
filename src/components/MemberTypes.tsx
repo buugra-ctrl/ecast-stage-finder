@@ -42,7 +42,7 @@ const MemberTypes = () => {
   return (
     <section id="members" className="py-20">
       <div className="container">
-        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+        <div className="text-left max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">
             Hemen Üye Ol
           </h2>
