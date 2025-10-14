@@ -2,7 +2,7 @@ import { Check } from "lucide-react";
 
 const AboutSection = () => {
   const stats = [
-    { value: "10,000+", label: "Active Members" },
+    { value: "5,000", label: "Active Members" },
     { value: "500+", label: "Castings Monthly" },
     { value: "200+", label: "Productions" },
     { value: "95%", label: "Success Rate" },
