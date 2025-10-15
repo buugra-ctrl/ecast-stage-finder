@@ -5,28 +5,28 @@ const Footer = () => {
 
   const footerLinks = {
     Platform: [
-      { name: "For Actors", href: "#" },
-      { name: "For Casting Directors", href: "#" },
-      { name: "For Agents", href: "#" },
-      { name: "Pricing", href: "#" },
+      { name: "Oyuncular İçin", href: "#" },
+      { name: "Casting Yönetmenleri İçin", href: "#" },
+      { name: "Ajanlar İçin", href: "#" },
+      { name: "Fiyatlandırma", href: "#" },
     ],
-    Resources: [
-      { name: "News & Advice", href: "#news" },
-      { name: "Help Center", href: "#" },
-      { name: "Success Stories", href: "#testimonials" },
-      { name: "Industry Insights", href: "#" },
+    Kaynaklar: [
+      { name: "Haberler & Tavsiyeler", href: "#news" },
+      { name: "Yardım Merkezi", href: "#" },
+      { name: "Başarı Hikayeleri", href: "#testimonials" },
+      { name: "Sektör İçgörüleri", href: "#" },
     ],
-    Company: [
-      { name: "About Us", href: "#about" },
-      { name: "Careers", href: "#" },
-      { name: "Contact", href: "#" },
-      { name: "Press", href: "#" },
+    Şirket: [
+      { name: "Hakkımızda", href: "#about" },
+      { name: "Kariyer", href: "#" },
+      { name: "İletişim", href: "#" },
+      { name: "Basın", href: "#" },
     ],
-    Legal: [
-      { name: "Terms of Service", href: "#" },
-      { name: "Privacy Policy", href: "#" },
-      { name: "Cookie Policy", href: "#" },
-      { name: "Accessibility", href: "#" },
+    Yasal: [
+      { name: "Hizmet Koşulları", href: "#" },
+      { name: "Gizlilik Politikası", href: "#" },
+      { name: "Çerez Politikası", href: "#" },
+      { name: "Erişilebilirlik", href: "#" },
     ],
   };
 
@@ -41,7 +41,7 @@ const Footer = () => {
               </span>
             </a>
             <p className="text-sm text-muted-foreground mb-4">
-              Connecting talent with opportunity in cinema, TV and theatre.
+              Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz.
             </p>
             <div className="flex gap-3">
               <a
@@ -97,7 +97,7 @@ const Footer = () => {
         <div className="border-t border-border pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
-              © {currentYear} ecast. All rights reserved.
+              © {currentYear} ecast. Tüm hakları saklıdır.
             </p>
             <div className="flex items-center gap-2 text-sm text-muted-foreground">
               <Mail className="h-4 w-4" />

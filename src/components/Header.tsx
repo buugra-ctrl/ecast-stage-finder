@@ -16,26 +16,26 @@ const Header = () => {
           
           <div className="hidden md:flex gap-6">
             <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              About
+              Hakkımızda
             </a>
             <a href="#members" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Memberships
+              Üyelikler
             </a>
             <a href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Testimonials
+              Referanslar
             </a>
             <a href="#news" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              News & Advice
+              Haberler & Tavsiyeler
             </a>
           </div>
         </div>
 
         <div className="flex items-center gap-4">
           <Button variant="ghost" size="sm" className="hidden md:inline-flex">
-            Sign In
+            Giriş Yap
           </Button>
           <Button size="sm">
-            Join Now
+            Hemen Üye Ol
           </Button>
           
           <button
@@ -52,16 +52,16 @@ const Header = () => {
         <div className="md:hidden border-t border-border">
           <div className="container py-4 flex flex-col gap-4">
             <a href="#about" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              About
+              Hakkımızda
             </a>
             <a href="#members" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Memberships
+              Üyelikler
             </a>
             <a href="#testimonials" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              Testimonials
+              Referanslar
             </a>
             <a href="#news" className="text-sm font-medium text-muted-foreground hover:text-foreground transition-colors">
-              News & Advice
+              Haberler & Tavsiyeler
             </a>
           </div>
         </div>

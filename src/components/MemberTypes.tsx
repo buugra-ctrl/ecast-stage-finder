@@ -5,35 +5,35 @@ import { Clapperboard, Users, Briefcase } from "lucide-react";
 const memberTypes = [
   {
     icon: Clapperboard,
-    title: "Casting Directors",
-    description: "Post casting calls, review submissions, and discover the perfect talent for your productions.",
+    title: "Casting Yönetmenleri",
+    description: "Casting çağrıları yayınlayın, başvuruları inceleyin ve prodüksiyonlarınız için mükemmel yetenekleri keşfedin.",
     features: [
-      "Unlimited casting calls",
-      "Advanced search filters",
-      "Direct communication with talent",
-      "Project management tools",
+      "Sınırsız casting çağrısı",
+      "Gelişmiş arama filtreleri",
+      "Yeteneklerle doğrudan iletişim",
+      "Proje yönetim araçları",
     ],
   },
   {
     icon: Users,
-    title: "Actors",
-    description: "Create your professional profile, showcase your work, and apply to exciting opportunities.",
+    title: "Oyuncular",
+    description: "Profesyonel profilinizi oluşturun, çalışmalarınızı sergileyin ve heyecan verici fırsatlara başvurun.",
     features: [
-      "Professional portfolio",
-      "Instant casting notifications",
-      "Self-tape submission tools",
-      "Career resources and guidance",
+      "Profesyonel portfolyo",
+      "Anlık casting bildirimleri",
+      "Self-tape gönderim araçları",
+      "Kariyer kaynakları ve rehberlik",
     ],
   },
   {
     icon: Briefcase,
-    title: "Agents",
-    description: "Manage your talent roster, track submissions, and connect with casting opportunities.",
+    title: "Ajanlar",
+    description: "Yetenek kadronuzu yönetin, başvuruları takip edin ve casting fırsatlarıyla bağlantı kurun.",
     features: [
-      "Multi-client management",
-      "Submission tracking",
-      "Contract management",
-      "Industry networking",
+      "Çoklu müşteri yönetimi",
+      "Başvuru takibi",
+      "Sözleşme yönetimi",
+      "Sektör ağı oluşturma",
     ],
   },
 ];
@@ -47,7 +47,7 @@ const MemberTypes = () => {
             Hemen Üye Ol
           </h2>
           <p className="text-lg text-muted-foreground">
-            Whether you're a casting director, actor, or agent, ecast has the perfect membership for you
+            İster casting yönetmeni, ister oyuncu, ister ajan olun, ecast sizin için mükemmel üyeliğe sahiptir
           </p>
         </div>
 
@@ -77,7 +77,7 @@ const MemberTypes = () => {
                 </CardContent>
                 <CardFooter>
                   <Button className="w-full">
-                    Learn More
+                    Daha Fazla Bilgi
                   </Button>
                 </CardFooter>
               </Card>

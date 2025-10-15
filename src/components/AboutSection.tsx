@@ -2,19 +2,19 @@ import { Check } from "lucide-react";
 
 const AboutSection = () => {
   const stats = [
-    { value: "5,000", label: "Active Members" },
-    { value: "500+", label: "Castings Monthly" },
-    { value: "200+", label: "Productions" },
-    { value: "95%", label: "Success Rate" },
+    { value: "5,000", label: "Aktif Üye" },
+    { value: "500+", label: "Aylık Casting" },
+    { value: "200+", label: "Prodüksiyon" },
+    { value: "95%", label: "Başarı Oranı" },
   ];
 
   const features = [
-    "Digital casting calls and submissions",
-    "Direct connection between talent and casting directors",
-    "Secure profile management and portfolio showcase",
-    "Real-time notifications for new opportunities",
-    "Industry-standard tools and resources",
-    "Transparent and fair casting process",
+    "Dijital casting çağrıları ve başvurular",
+    "Yetenek ve casting yönetmenleri arasında doğrudan bağlantı",
+    "Güvenli profil yönetimi ve portfolyo vitrini",
+    "Yeni fırsatlar için anlık bildirimler",
+    "Sektör standardı araçlar ve kaynaklar",
+    "Şeffaf ve adil casting süreci",
   ];
 
   return (
@@ -22,12 +22,12 @@ const AboutSection = () => {
       <div className="container">
         <div className="text-left max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">
-            What is ecast?
+            ecast nedir?
           </h2>
           <p className="text-lg text-muted-foreground">
-            ecast is revolutionizing the entertainment industry by creating a seamless digital platform 
-            that connects actors, casting directors, and agents. We're democratizing access to opportunities 
-            and making the casting process more efficient, transparent, and inclusive for everyone.
+            ecast, oyuncuları, casting yönetmenlerini ve ajanları birbirine bağlayan kusursuz bir dijital 
+            platform oluşturarak eğlence sektöründe devrim yapıyor. Fırsatlara erişimi demokratikleştiriyor 
+            ve casting sürecini herkes için daha verimli, şeffaf ve kapsayıcı hale getiriyoruz.
           </p>
         </div>
 

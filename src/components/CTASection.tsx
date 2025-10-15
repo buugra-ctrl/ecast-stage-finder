@@ -17,11 +17,11 @@ const CTASection = () => {
           
           <div className="order-1 md:order-2 space-y-6">
             <h2 className="text-3xl md:text-5xl font-bold">
-              Ready to Transform Your Career?
+              Kariyerinizi Dönüştürmeye Hazır mısınız?
             </h2>
             <p className="text-lg text-muted-foreground">
-              Join thousands of industry professionals who are already using ecast to connect, 
-              collaborate, and create opportunities in the entertainment industry.
+              Eğlence sektöründe bağlantı kurmak, işbirliği yapmak ve fırsatlar yaratmak için 
+              halihazırda ecast kullanan binlerce sektör profesyoneline katılın.
             </p>
             
             <div className="space-y-4">
@@ -30,8 +30,8 @@ const CTASection = () => {
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Quick Setup</h3>
-                  <p className="text-sm text-muted-foreground">Create your profile in minutes</p>
+                  <h3 className="font-semibold mb-1">Hızlı Kurulum</h3>
+                  <p className="text-sm text-muted-foreground">Profilinizi dakikalar içinde oluşturun</p>
                 </div>
               </div>
               
@@ -40,8 +40,8 @@ const CTASection = () => {
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Instant Access</h3>
-                  <p className="text-sm text-muted-foreground">Start browsing opportunities immediately</p>
+                  <h3 className="font-semibold mb-1">Anında Erişim</h3>
+                  <p className="text-sm text-muted-foreground">Fırsatlara hemen göz atmaya başlayın</p>
                 </div>
               </div>
               
@@ -50,18 +50,18 @@ const CTASection = () => {
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Professional Support</h3>
-                  <p className="text-sm text-muted-foreground">Get help from our dedicated team</p>
+                  <h3 className="font-semibold mb-1">Profesyonel Destek</h3>
+                  <p className="text-sm text-muted-foreground">Özel ekibimizden yardım alın</p>
                 </div>
               </div>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
               <Button size="lg" className="bg-primary hover:bg-primary/90">
-                Join Now
+                Hemen Üye Ol
               </Button>
               <Button size="lg" variant="outline">
-                Contact Us
+                Bize Ulaşın
               </Button>
             </div>
           </div>

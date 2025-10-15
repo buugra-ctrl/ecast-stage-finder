@@ -6,18 +6,18 @@ import heroCasting from "@/assets/hero-casting.jpg";
 const slides = [
   {
     image: heroCasting,
-    title: "Welcome to the Future of Casting",
-    subtitle: "Connecting talent with opportunity in cinema, TV and theatre",
+    title: "Casting'in Geleceğine Hoş Geldiniz",
+    subtitle: "Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz",
   },
   {
     image: heroCasting,
-    title: "Digitalize Your Casting Process",
-    subtitle: "Streamline auditions and discover exceptional talent efficiently",
+    title: "Casting Sürecinizi Dijitalleştirin",
+    subtitle: "Seçmeleri kolaylaştırın ve istisnai yetenekleri verimli bir şekilde keşfedin",
   },
   {
     image: heroCasting,
-    title: "Join Thousands of Industry Professionals",
-    subtitle: "Actors, casting directors, and agents united on one platform",
+    title: "Binlerce Sektör Profesyoneline Katılın",
+    subtitle: "Oyuncular, casting yönetmenleri ve ajanlar tek bir platformda bir arada",
   },
 ];
 
@@ -69,10 +69,10 @@ const HeroSlider = () => {
               </p>
               <div className="flex flex-wrap gap-4">
                 <Button size="lg" className="bg-primary hover:bg-primary/90">
-                  Join Now
+                  Hemen Üye Ol
                 </Button>
                 <Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
-                  Learn More
+                  Daha Fazla Bilgi
                 </Button>
               </div>
             </div>

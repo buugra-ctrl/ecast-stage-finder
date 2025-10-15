@@ -5,30 +5,30 @@ import { useState, useEffect } from "react";
 const testimonials = [
   {
     name: "Sarah Mitchell",
-    role: "Casting Director",
+    role: "Casting Yönetmeni",
     company: "Thames Productions",
-    content: "ecast has completely transformed how we conduct casting. The platform is intuitive, efficient, and has helped us discover incredible talent we wouldn't have found otherwise.",
+    content: "ecast, casting sürecimizi tamamen dönüştürdü. Platform sezgisel, verimli ve başka türlü bulamayacağımız inanılmaz yetenekleri keşfetmemize yardımcı oldu.",
     rating: 5,
   },
   {
     name: "James Cooper",
-    role: "Actor",
+    role: "Oyuncu",
     company: "Stage & Screen",
-    content: "As an actor, ecast has opened up so many opportunities for me. The direct connection with casting directors and the quality of roles posted here is outstanding.",
+    content: "Bir oyuncu olarak ecast benim için pek çok fırsat açtı. Casting yönetmenleriyle doğrudan bağlantı ve burada yayınlanan rollerin kalitesi olağanüstü.",
     rating: 5,
   },
   {
     name: "Emma Thompson",
-    role: "Talent Agent",
+    role: "Yetenek Ajanı",
     company: "Stellar Talent Agency",
-    content: "Managing multiple clients has never been easier. ecast's tools help me track submissions, manage schedules, and connect my talent with the right opportunities.",
+    content: "Birden fazla müşteriyi yönetmek hiç bu kadar kolay olmamıştı. ecast'in araçları başvuruları takip etmeme, programları yönetmeme ve yeteneklerimi doğru fırsatlarla bağlantı kurmama yardımcı oluyor.",
     rating: 5,
   },
   {
     name: "Michael Roberts",
-    role: "Theatre Director",
+    role: "Tiyatro Yönetmeni",
     company: "Royal Arts Theatre",
-    content: "The quality of talent on ecast is exceptional. We've cast our last three productions entirely through the platform with outstanding results.",
+    content: "ecast'teki yetenek kalitesi istisnai. Son üç prodüksiyonumuzu tamamen platform üzerinden harika sonuçlarla oluşturduk.",
     rating: 5,
   },
 ];
@@ -52,10 +52,10 @@ const Testimonials = () => {
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-bold">
-            What Our Members Say
+            Üyelerimiz Ne Diyor
           </h2>
           <p className="text-lg text-muted-foreground">
-            Hear from casting directors, actors, and agents who are thriving on ecast
+            ecast'te başarılı olan casting yönetmenlerinden, oyunculardan ve ajanslardan dinleyin
           </p>
         </div>
 

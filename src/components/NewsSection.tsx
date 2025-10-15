@@ -4,25 +4,25 @@ import { Calendar, ArrowRight } from "lucide-react";
 
 const articles = [
   {
-    title: "How to Prepare for Your First Casting Call",
-    excerpt: "Essential tips and advice for actors preparing for their first professional casting experience.",
-    date: "March 15, 2024",
-    category: "Advice",
-    readTime: "5 min read",
+    title: "İlk Casting Çağrınıza Nasıl Hazırlanırsınız",
+    excerpt: "İlk profesyonel casting deneyimlerine hazırlanan oyuncular için önemli ipuçları ve tavsiyeler.",
+    date: "15 Mart 2024",
+    category: "Tavsiye",
+    readTime: "5 dk okuma",
   },
   {
-    title: "The Future of Digital Casting in Theatre",
-    excerpt: "Exploring how technology is revolutionizing the way we discover and cast talent in live performance.",
-    date: "March 10, 2024",
-    category: "Industry News",
-    readTime: "7 min read",
+    title: "Tiyatroda Dijital Casting'in Geleceği",
+    excerpt: "Teknolojinin canlı performansta yetenek keşfetme ve seçme şeklimizde nasıl devrim yarattığını keşfedin.",
+    date: "10 Mart 2024",
+    category: "Sektör Haberleri",
+    readTime: "7 dk okuma",
   },
   {
-    title: "Building Your Professional Acting Portfolio",
-    excerpt: "A comprehensive guide to creating a standout portfolio that catches casting directors' attention.",
-    date: "March 5, 2024",
-    category: "Advice",
-    readTime: "6 min read",
+    title: "Profesyonel Oyunculuk Portfolyonuzu Oluşturma",
+    excerpt: "Casting yönetmenlerinin dikkatini çeken öne çıkan bir portfolyo oluşturmak için kapsamlı bir rehber.",
+    date: "5 Mart 2024",
+    category: "Tavsiye",
+    readTime: "6 dk okuma",
   },
 ];
 
@@ -33,14 +33,14 @@ const NewsSection = () => {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-4">
           <div>
             <h2 className="text-3xl md:text-5xl font-bold mb-4">
-              News & Advice
+              Haberler & Tavsiyeler
             </h2>
             <p className="text-lg text-muted-foreground">
-              Stay updated with industry insights and expert guidance
+              Sektör içgörüleri ve uzman rehberliği ile güncel kalın
             </p>
           </div>
           <Button variant="outline" className="group">
-            View All Articles
+            Tüm Makaleleri Görüntüle
             <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
           </Button>
         </div>
@@ -67,7 +67,7 @@ const NewsSection = () => {
               </CardHeader>
               <CardContent>
                 <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary">
-                  Read More
+                  Devamını Oku
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
               </CardContent>
