@@ -35,14 +35,14 @@ const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleM
 
   return (
     <div
-      className={`flex items-center h-10 w-10 ${className}`}
+      className={`flex items-center h-12 w-12 ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <img
         src={logo}
         alt="ecast"
-        className="h-10 w-10 object-contain transition-transform duration-300 ease-out will-change-transform"
+        className="h-12 w-12 object-contain transition-transform duration-300 ease-out will-change-transform"
         style={{
           transform: `scale(${scale})`,
           transformOrigin: 'center',
