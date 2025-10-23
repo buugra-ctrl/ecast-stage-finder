@@ -48,7 +48,7 @@ const FAQSection = () => {
         <div className="max-w-4xl mx-auto space-y-6">
           {displayedFaqs.map((faq, index) => (
             <div key={index} className="bg-muted/30 p-6 rounded-lg">
-              <h3 className="text-xl font-semibold mb-2">{faq.question}</h3>
+              <h3 className="text-xl font-light mb-2">{faq.question}</h3>
               <p className="text-muted-foreground">{faq.answer}</p>
             </div>
           ))}
@@ -56,7 +56,7 @@ const FAQSection = () => {
 
         {faqs.length > 4 && (
           <div className="text-center mt-8">
-            <Button onClick={() => setShowMore(!showMore)} variant="default">
+            <Button onClick={() => setShowMore(!showMore)} variant="default" className="hover:bg-[#2163b7]">
               {showMore ? "Daha Az Göster" : "Daha Fazla Soru"}
             </Button>
           </div>
