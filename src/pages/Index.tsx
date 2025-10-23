@@ -1,5 +1,5 @@
-import Header from "@/components/Header";
-import HeroSlider from "@/components/HeroSlider";
+import Navbar from "@/components/Navbar";
+import HeroVideo from "@/components/HeroVideo";
 import AboutSection from "@/components/AboutSection";
 import MemberTypes from "@/components/MemberTypes";
 import CTASection from "@/components/CTASection";
@@ -10,9 +10,9 @@ import Footer from "@/components/Footer";
 const Index = () => {
   return (
     <div className="min-h-screen">
-      <Header />
+      <Navbar />
       <main>
-        <HeroSlider />
+        <HeroVideo />
         <AboutSection />
         <MemberTypes />
         <CTASection />
