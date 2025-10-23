@@ -34,7 +34,7 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center space-x-2 mb-4">
-              <span className="text-2xl font-bold bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
+              <span className="text-2xl font-light bg-gradient-to-r from-primary to-accent bg-clip-text text-transparent">
                 ecast
               </span>
             </a>
