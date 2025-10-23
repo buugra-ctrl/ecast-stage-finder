@@ -27,7 +27,7 @@ const memberTypes = [
   },
   {
     icon: Briefcase,
-    title: "Menejerler",
+    title: "Menajerler",
     description: "Yetenek kadronuzu yönetin, başvuruları takip edin ve casting fırsatlarıyla bağlantı kurun.",
     features: [
       "Çoklu müşteri yönetimi",
