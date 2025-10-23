@@ -60,7 +60,7 @@ const CTASection = () => {
                 Hemen Üye Ol
               </Button>
               <Button size="lg" variant="outline">
-                Bize Ulaşın
+                Bİze Ulaşın
               </Button>
             </div>
           </div>
