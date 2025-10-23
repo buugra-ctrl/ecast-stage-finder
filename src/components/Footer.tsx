@@ -12,15 +12,13 @@ const Footer = () => {
     ],
     Kaynaklar: [
       { name: "Haberler & Tavsiyeler", href: "#news" },
-      { name: "Yardım Merkezi", href: "#" },
+      { name: "SSS", href: "#faq" },
       { name: "Başarı Hikayeleri", href: "#testimonials" },
       { name: "Sektör İçgörüleri", href: "#" },
     ],
     Şirket: [
       { name: "Hakkımızda", href: "#about" },
-      { name: "Kariyer", href: "#" },
       { name: "İletişim", href: "#" },
-      { name: "Basın", href: "#" },
     ],
     Yasal: [
       { name: "Hizmet Koşulları", href: "#" },
