@@ -6,7 +6,7 @@ const Footer = () => {
   const footerLinks = {
     Platform: [
       { name: "Oyuncular", href: "#" },
-      { name: "Casting Direktörleri", href: "#" },
+      { name: "Cast Direktörleri", href: "#" },
       { name: "Menajerler", href: "#" },
       { name: "Fiyatlandırma", href: "#" },
     ],
