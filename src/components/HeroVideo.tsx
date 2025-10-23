@@ -24,7 +24,7 @@ const slides = [
 const HeroVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [currentSlide, setCurrentSlide] = useState(0);
-  const [showSlider, setShowSlider] = useState(false);
+  const [showSlider, setShowSlider] = useState(true);
 
   useEffect(() => {
     const video = videoRef.current;
