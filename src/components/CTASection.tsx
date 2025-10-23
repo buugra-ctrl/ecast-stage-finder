@@ -17,11 +17,11 @@ const CTASection = () => {
           
           <div className="order-1 md:order-2 space-y-6">
             <h2 className="text-3xl md:text-5xl font-light">
-              Kariyerinizi Dönüştürmeye Hazır mısınız?
+              Hikayeniz burada başlıyor!
             </h2>
             <p className="text-lg text-muted-foreground">
-              Eğlence sektöründe bağlantı kurmak, işbirliği yapmak ve fırsatlar yaratmak için 
-              halihazırda ecast kullanan binlerce sektör profesyoneline katılın.
+              En iyi yapımları takip etmek, kariyer fırsatları yaratmak ve 
+              en iyi yetenekleri bulmak için ecast kullanan sektör profesyoneline katılın.
             </p>
             
             <div className="space-y-4">
@@ -30,7 +30,7 @@ const CTASection = () => {
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Hızlı Kurulum</h3>
+                  <h3 className="font-light mb-1">Hızlı Kurulum</h3>
                   <p className="text-sm text-muted-foreground">Profilinizi dakikalar içinde oluşturun</p>
                 </div>
               </div>
@@ -40,7 +40,7 @@ const CTASection = () => {
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Anında Erişim</h3>
+                  <h3 className="font-light mb-1">Anında Erişim</h3>
                   <p className="text-sm text-muted-foreground">Fırsatlara hemen göz atmaya başlayın</p>
                 </div>
               </div>
@@ -50,10 +50,9 @@ const CTASection = () => {
                   <ArrowRight className="h-4 w-4 text-primary" />
                 </div>
                 <div>
-                  <h3 className="font-semibold mb-1">Profesyonel Destek</h3>
-                  <p className="text-sm text-muted-foreground">Özel ekibimizden yardım alın</p>
+                  <h3 className="font-light mb-1">Gelişmiş Filtreler</h3>
+                  <p className="text-sm text-muted-foreground">Aradığınız yeteneğe hızlıca ulaşın</p>
                 </div>
-              </div>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
