@@ -35,7 +35,13 @@ const Footer = () => {
         <div className="grid grid-cols-2 md:grid-cols-5 gap-8 mb-12">
           <div className="col-span-2 md:col-span-1">
             <a href="/" className="flex items-center mb-4">
-              <Logo />
+              <div className="flex items-center h-26 w-26">
+                <img
+                  src="/src/assets/ecast-logo.png"
+                  alt="ecast"
+                  className="h-26 w-26 object-contain"
+                />
+              </div>
             </a>
             <p className="text-sm text-muted-foreground mb-4">
               Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz.
