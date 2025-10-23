@@ -5,14 +5,15 @@ const Footer = () => {
 
   const footerLinks = {
     Platform: [
-      { name: "Oyuncular", href: "#" },
-      { name: "Cast Direktörleri", href: "#" },
-      { name: "Menajerler", href: "#" },
+      { name: "Oyuncular İçin", href: "#" },
+      { name: "Casting Yönetmenleri İçin", href: "#" },
+      { name: "Ajanlar İçin", href: "#" },
       { name: "Fiyatlandırma", href: "#" },
     ],
     Kaynaklar: [
       { name: "Haberler & Tavsiyeler", href: "#news" },
-      { name: "Sıkça Sorulan Sorular", href: "#" },
+      { name: "SSS", href: "#faq" },
+      { name: "Başarı Hikayeleri", href: "#testimonials" },
       { name: "Sektör İçgörüleri", href: "#" },
     ],
     Şirket: [
