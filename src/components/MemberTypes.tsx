@@ -57,7 +57,7 @@ const MemberTypes = () => {
                   <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-2xl font-normal text-white">{type.title}</CardTitle>
+                  <CardTitle className="text-2xl font-light text-white">{type.title}</CardTitle>
                   <CardDescription className="text-base text-white/80">
                     {type.description}
                   </CardDescription>
