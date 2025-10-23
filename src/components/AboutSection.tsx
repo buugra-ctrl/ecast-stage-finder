@@ -12,7 +12,7 @@ Sadece sektör profesyonelleri`;
     <section id="about" className="py-20 bg-muted/30">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold">
+          <h2 className="text-3xl md:text-5xl font-light">
             ecast nedir?
           </h2>
           <p className="text-lg text-muted-foreground">
