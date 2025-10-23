@@ -1,48 +1,89 @@
-import { Check } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Clapperboard, Users, Briefcase } from "lucide-react";
 
-const AboutSection = () => {
-  const features = `Profesyonel profil yönetimi ve portfolyo vitrini
-Yeni fırsatlar için anlık bildirimler
-Gelişmiş arama filtreleri
-Güncel ve doğru bilgiye erişim
-Yeni yetenek keşifleri
-Sadece sektör profesyonelleri`;
+const memberTypes = [
+  {
+    icon: Clapperboard,
+    title: "Cast Direktörleri",
+    description: "Yeni rol ilanları yayınlayın, başvuruları inceleyin ve prodüksiyonlarınız için mükemmel yetenekleri keşfedin.",
+    features: [
+      "Sınırsız rol ilanı yayınlama",
+      "Gelişmiş arama filtreleri",
+      "Yeteneklerle doğrudan iletişim",
+      "Proje yönetim araçları",
+    ],
+  },
+  {
+    icon: Users,
+    title: "Oyuncular",
+    description: "Profesyonel profilinizi oluşturun, çalışmalarınızı sergileyin ve heyecan verici fırsatlara başvurun.",
+    features: [
+      "Profesyonel CV",
+      "Anlık casting bildirimleri",
+      "Fırsatlarını görüntüme ve başvuru",
+      "Kariyer gelişim kaynakları",
+    ],
+  },
+  {
+    icon: Briefcase,
+    title: "Menajerler",
+    description: "Yetenek kadronuzu yönetin, başvuruları takip edin ve casting fırsatlarıyla bağlantı kurun.",
+    features: [
+      "Çoklu müşteri yönetimi",
+      "Başvuru takibi",
+      "Yeni yetenek keşfi",
+      "Proje yönetimi ve takibi",
+    ],
+  },
+];
 
+const MemberTypes = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="members" className="py-20 bg-[#002b54]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-light">
-            ecast nedir?
+          <h2 className="text-3xl md:text-5xl font-light text-white">
+            Üyelikler
           </h2>
-          <p className="text-lg text-muted-foreground">
-            Cast direktörleri, oyuncular ve menajerlerin birbirine bağlayarak, oyuncu seçme süreçlerini dijitalleştiren ve demokratikleştiren, sektör profesyonellerine özel Türkiye'nin ilk dijital casting platformu!
-          </p>
         </div>
 
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {features.split('\n').slice(0, 3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <span className="text-[#002b54] text-xl mt-1">✓</span>
-                  <span className="text-lg text-muted-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4 ml-5">
-              {features.split('\n').slice(3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <span className="text-[#002b54] text-xl mt-1">✓</span>
-                  <span className="text-lg text-muted-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
-          </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {memberTypes.map((type, index) => {
+            const Icon = type.icon;
+            return (
+              <Card key={index} className="bg-[#002b54] border-white text-white hover:shadow-xl hover:bg-[#e2e6e8] transition-all min-h-full flex flex-col">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4">
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl font-light text-white">{type.title}</CardTitle>
+                  <CardDescription className="text-base text-white/80">
+                    {type.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    {type.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-white">
+                        <div className="w-1.5 h-1.5 rounded-full bg-white mt-2" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter className="mt-auto">
+                  <Button className="w-full bg-white text-[#002b54] hover:bg-[#eff2f5]">
+                    Daha Fazla Bilgi
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default MemberTypes;
