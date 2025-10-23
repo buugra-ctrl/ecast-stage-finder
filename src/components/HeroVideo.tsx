@@ -49,3 +49,145 @@ const HeroVideo = () => {
       return () => clearInterval(timer);
     }
   }, [showSlider]);
+
+  const goToSlide = (index: number) => {
+    setCurrentSlide(index);
+  };
+
+  const nextSlide = () => {
+    setCurrentSlide((prev) => (prev + 1) % slides.length);
+  };
+
+  const prevSlide = () => {
+    setCurrentSlide((prev) => (prev - 1 + slides.length) % slides.length);
+  };
+
+  return (
+    <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
+      {!showSlider ? (
+        <>
+          <video
+            ref={videoRef}
+            className="absolute inset-0 w-full h-full object-cover"
+            autoPlay
+            muted
+            playsInline
+          >
+            <source src="/hero-video.mp4" type="video/mp4" />
+            {/* Fallback image if video doesn't load */}
+            <img
+              src="/hero-fallback.jpg"
+              alt="Hero background"
+              className="absolute inset-0 w-full h-full object-cover"
+            />
+          </video>
+
+          {/* Overlay */}
+          <div className="absolute inset-0 bg-black/50" />
+
+          {/* Content */}
+          <div className="relative container h-full flex items-center">
+            <div className="max-w-2xl text-white space-y-6">
+              <h1 className="text-4xl md:text-6xl font-light leading-tight">
+                Casting'in Geleceğine Hoş Geldiniz
+              </h1>
+              <p className="text-lg md:text-xl text-white/90">
+                Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <Button
+                  size="lg"
+                  className="bg-[#002b54] hover:bg-[#001f3d]"
+                >
+                  Hemen Üye Ol
+                </Button>
+                <Button
+                  size="lg"
+                  variant="outline"
+                  className="border-white text-white hover:bg-white/10"
+                >
+                  Daha Fazla Bilgi
+                </Button>
+              </div>
+            </div>
+          </div>
+        </>
+      ) : (
+        <>
+          {slides.map((slide, index) => (
+            <div
+              key={index}
+              className={`absolute inset-0 transition-opacity duration-1000 ${
+                index === currentSlide ? "opacity-100" : "opacity-0"
+              }`}
+            >
+              <div
+                className="absolute inset-0 bg-cover bg-center"
+                style={{ backgroundImage: `url(${slide.image})` }}
+              >
+                <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
+              </div>
+
+              <div className="relative container h-full flex items-center">
+                <div className="max-w-2xl text-white space-y-6 animate-fade-in">
+                  <h1 className="text-4xl md:text-6xl font-light leading-tight">
+                    {slide.title}
+                  </h1>
+                  <p className="text-lg md:text-xl text-white/90">
+                    {slide.subtitle}
+                  </p>
+                  <div className="flex flex-wrap gap-4">
+                    <Button
+                      size="lg"
+                      className="bg-[#002b54] hover:bg-[#001f3d]"
+                    >
+                      Hemen Üye Ol
+                    </Button>
+                    <Button
+                      size="lg"
+                      variant="outline"
+                      className="border-white text-white hover:bg-white/10"
+                    >
+                      Daha Fazla Bilgi
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          ))}
+
+          <button
+            onClick={prevSlide}
+            className="absolute left-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm transition-all"
+            aria-label="Previous slide"
+          >
+            <ChevronLeft className="h-6 w-6" />
+          </button>
+
+          <button
+            onClick={nextSlide}
+            className="absolute right-4 top-1/2 -translate-y-1/2 p-2 rounded-full bg-white/10 hover:bg-white/20 text-white backdrop-blur-sm transition-all"
+            aria-label="Next slide"
+          >
+            <ChevronRight className="h-6 w-6" />
+          </button>
+
+          <div className="absolute bottom-8 left-1/2 -translate-x-1/2 flex gap-2">
+            {slides.map((_, index) => (
+              <button
+                key={index}
+                onClick={() => goToSlide(index)}
+                className={`h-2 rounded-full transition-all ${
+                  index === currentSlide ? "w-8 bg-white" : "w-2 bg-white/50"
+                }`}
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
+        </>
+      )}
+    </section>
+  );
+};
+
+export default HeroVideo;
