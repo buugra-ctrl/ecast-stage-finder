@@ -8,7 +8,7 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-hexffffff/100 h-16 md:h-16 overflow-visible">
+    <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 h-16 md:h-16 overflow-visible transition-all duration-300">
       <nav ref={navRef} className="container flex h-full items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <a href="/">
