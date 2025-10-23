@@ -43,7 +43,7 @@ const MemberTypes = () => {
     <section id="members" className="py-20 bg-[#002b54]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold text-white">
+          <h2 className="text-3xl md:text-5xl font-light text-white">
             Üyelikler
           </h2>
         </div>
