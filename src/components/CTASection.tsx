@@ -53,6 +53,7 @@ const CTASection = () => {
                   <h3 className="font-light mb-1">Gelişmiş Filtreler</h3>
                   <p className="text-sm text-muted-foreground">Aradığınız yeteneğe hızlıca ulaşın</p>
                 </div>
+              </div>
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
