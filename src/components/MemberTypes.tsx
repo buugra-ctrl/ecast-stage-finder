@@ -73,7 +73,7 @@ const MemberTypes = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button className="w-full bg-white text-[#002b54] hover:bg-white/90">
+                  <Button className="w-full bg-white text-[#002b54] hover:bg-[#eff2f5]">
                     Daha Fazla Bilgi
                   </Button>
                 </CardFooter>
