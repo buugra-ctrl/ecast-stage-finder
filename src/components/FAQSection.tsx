@@ -1,8 +1,10 @@
 import { useState } from "react";
 import { Button } from "@/components/ui/button";
+import { ChevronDown, ChevronUp } from "lucide-react";
 
 const FAQSection = () => {
   const [showMore, setShowMore] = useState(false);
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 
   const faqs = [
     {
@@ -33,6 +35,16 @@ const FAQSection = () => {
 
   const displayedFaqs = showMore ? faqs : faqs.slice(0, 4);
 
+  const toggleItem = (index: number) => {
+    const newOpenItems = new Set(openItems);
+    if (newOpenItems.has(index)) {
+      newOpenItems.delete(index);
+    } else {
+      newOpenItems.add(index);
+    }
+    setOpenItems(newOpenItems);
+  };
+
   return (
     <section id="faq" className="py-20 bg-white">
       <div className="container">
@@ -45,19 +57,36 @@ const FAQSection = () => {
           </p>
         </div>
 
-        <div className="max-w-4xl mx-auto space-y-6">
-          {displayedFaqs.map((faq, index) => (
-            <div key={index} className="bg-muted/30 p-6 rounded-lg">
-              <h3 className="text-xl font-light mb-2">{faq.question}</h3>
-              <p className="text-muted-foreground">{faq.answer}</p>
-            </div>
-          ))}
+        <div className="max-w-4xl mx-auto space-y-4">
+          {displayedFaqs.map((faq, index) => {
+            const isOpen = openItems.has(index);
+            return (
+              <div key={index} className="bg-muted/30 rounded-lg overflow-hidden">
+                <button
+                  onClick={() => toggleItem(index)}
+                  className="w-full p-6 text-left flex items-center justify-between hover:bg-muted/50 transition-colors"
+                >
+                  <h3 className="text-xl font-light">{faq.question}</h3>
+                  {isOpen ? (
+                    <ChevronUp className="h-5 w-5 text-muted-foreground" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-muted-foreground" />
+                  )}
+                </button>
+                {isOpen && (
+                  <div className="px-6 pb-6">
+                    <p className="text-muted-foreground">{faq.answer}</p>
+                  </div>
+                )}
+              </div>
+            );
+          })}
         </div>
 
         {faqs.length > 4 && (
           <div className="text-center mt-8">
             <Button onClick={() => setShowMore(!showMore)} variant="default" className="hover:bg-[#2163b7]">
-              {showMore ? "Daha Az Göster" : "Daha Fazla Soru"}
+              {showMore ? "Daha Az Göster" : "Daha Fazla"}
             </Button>
           </div>
         )}
