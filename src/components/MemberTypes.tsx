@@ -52,7 +52,7 @@ const MemberTypes = () => {
           {memberTypes.map((type, index) => {
             const Icon = type.icon;
             return (
-              <Card key={index} className="bg-[#002b54] border-white text-white hover:shadow-xl hover:bg-[#e2e6e8] transition-all min-h-full flex flex-col">
+              <Card key={index} className="bg-[#002b54] border-white text-white min-h-full flex flex-col">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4">
                     <Icon className="h-6 w-6 text-white" />
@@ -73,7 +73,7 @@ const MemberTypes = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button className="w-full bg-white text-[#002b54] hover:bg-[#eff2f5]">
+                  <Button className="w-full bg-white text-[#002b54] hover:bg-[#e2e6e8] hover:text-[#002b54]">
                     Daha Fazla Bilgi
                   </Button>
                 </CardFooter>
