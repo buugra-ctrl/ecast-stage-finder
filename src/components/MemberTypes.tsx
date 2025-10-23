@@ -19,21 +19,21 @@ const memberTypes = [
     title: "Oyuncular",
     description: "Profesyonel profilinizi oluşturun, çalışmalarınızı sergileyin ve heyecan verici fırsatlara başvurun.",
     features: [
-      "Profesyonel portfolyo",
+      "Profesyonel CV",
       "Anlık casting bildirimleri",
-      "Self-tape gönderim araçları",
-      "Kariyer kaynakları ve rehberlik",
+      "Fırsatlarını görüntüme ve başvuru",
+      "Kariyer gelişim kaynakları",
     ],
   },
   {
     icon: Briefcase,
-    title: "Ajanlar",
+    title: "Menejerler",
     description: "Yetenek kadronuzu yönetin, başvuruları takip edin ve casting fırsatlarıyla bağlantı kurun.",
     features: [
       "Çoklu müşteri yönetimi",
       "Başvuru takibi",
-      "Sözleşme yönetimi",
-      "Sektör ağı oluşturma",
+      "Yeni yetenek keşfi",
+      "Proje yönetimi ve takibi",
     ],
   },
 ];
@@ -57,7 +57,7 @@ const MemberTypes = () => {
                   <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4">
                     <Icon className="h-6 w-6 text-white" />
                   </div>
-                  <CardTitle className="text-2xl text-white">{type.title}</CardTitle>
+                  <CardTitle className="text-2xl font-normal text-white">{type.title}</CardTitle>
                   <CardDescription className="text-base text-white/80">
                     {type.description}
                   </CardDescription>
