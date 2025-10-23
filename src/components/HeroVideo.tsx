@@ -1,51 +1,51 @@
-import { useRef } from "react";
+import { useRef, useState, useEffect } from "react";
+import { Button } from "@/components/ui/button";
+import { ChevronLeft, ChevronRight } from "lucide-react";
+import heroCasting from "@/assets/hero-casting.jpg";
+
+const slides = [
+  {
+    image: heroCasting,
+    title: "Casting'in Geleceğine Hoş Geldiniz",
+    subtitle: "Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz",
+  },
+  {
+    image: heroCasting,
+    title: "Casting Sürecinizi Dijitalleştirin",
+    subtitle: "Seçmeleri kolaylaştırın ve istisnai yetenekleri verimli bir şekilde keşfedin",
+  },
+  {
+    image: heroCasting,
+    title: "Binlerce Sektör Profesyoneline Katılın",
+    subtitle: "Oyuncular, casting yönetmenleri ve ajanlar tek bir platformda bir arada",
+  },
+];
 
 const HeroVideo = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
+  const [currentSlide, setCurrentSlide] = useState(0);
+  const [showSlider, setShowSlider] = useState(false);
 
-  return (
-    <section className="relative w-full h-[600px] md:h-[700px] overflow-hidden">
-      <video
-        ref={videoRef}
-        className="absolute inset-0 w-full h-full object-cover"
-        autoPlay
-        muted
-        loop
-        playsInline
-      >
-        <source src="/hero-video.mp4" type="video/mp4" />
-        {/* Fallback image if video doesn't load */}
-        <img
-          src="/hero-fallback.jpg"
-          alt="Hero background"
-          className="absolute inset-0 w-full h-full object-cover"
-        />
-      </video>
+  useEffect(() => {
+    const video = videoRef.current;
+    if (video) {
+      const handleVideoEnd = () => {
+        setShowSlider(true);
+      };
 
-      {/* Overlay */}
-      <div className="absolute inset-0 bg-black/50" />
+      video.addEventListener('ended', handleVideoEnd);
 
-      {/* Content */}
-      <div className="relative container h-full flex items-center">
-        <div className="max-w-2xl text-white space-y-6">
-          <h1 className="text-4xl md:text-6xl font-light leading-tight">
-            Casting'in Geleceğine Hoş Geldiniz
-          </h1>
-          <p className="text-lg md:text-xl text-white/90">
-            Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz
-          </p>
-          <div className="flex flex-wrap gap-4">
-            <button className="bg-[#002b54] text-white px-6 py-3 rounded-full uppercase tracking-wide font-medium hover:bg-[#001f3d] transition-colors duration-200">
-              Hemen Üye Ol
-            </button>
-            <button className="bg-white text-[#002b54] px-6 py-3 rounded-full uppercase tracking-wide font-medium hover:bg-gray-100 transition-colors duration-200">
-              Daha Fazla Bilgi
-            </button>
-          </div>
-        </div>
-      </div>
-    </section>
-  );
-};
+      return () => {
+        video.removeEventListener('ended', handleVideoEnd);
+      };
+    }
+  }, []);
 
-export default HeroVideo;
+  useEffect(() => {
+    if (showSlider) {
+      const timer = setInterval(() => {
+        setCurrentSlide((prev) => (prev + 1) % slides.length);
+      }, 5000);
+      return () => clearInterval(timer);
+    }
+  }, [showSlider]);
