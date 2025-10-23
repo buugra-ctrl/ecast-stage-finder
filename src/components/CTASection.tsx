@@ -16,7 +16,7 @@ const CTASection = () => {
           </div>
           
           <div className="order-1 md:order-2 space-y-6">
-            <h2 className="text-3xl md:text-5xl font-bold">
+            <h2 className="text-3xl md:text-5xl font-light">
               Kariyerinizi Dönüştürmeye Hazır mısınız?
             </h2>
             <p className="text-lg text-muted-foreground">
