@@ -8,7 +8,7 @@ const Navbar = () => {
   const navRef = useRef<HTMLDivElement | null>(null);
 
   return (
-    <header className="sticky top-0 z-50 w-full bg-white/80 h-16 md:h-16 overflow-visible">
+    <header className="sticky top-0 z-50 w-full bg-hexffffff/100 h-16 md:h-16 overflow-visible">
       <nav ref={navRef} className="container flex h-full items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <a href="/">
@@ -16,17 +16,17 @@ const Navbar = () => {
           </a>
 
           <div className="hidden md:flex gap-6">
+              <a href="#members" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              Üyelikler
+            </a>
             <a href="#about" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
               Hakkımızda
             </a>
-            <a href="#members" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Üyelikler
+             <a href="#news" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              Haberler & Tavsiyeler
             </a>
             <a href="#testimonials" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Referanslar
-            </a>
-            <a href="#news" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Haberler & Tavsiyeler
+              İletişim
             </a>
           </div>
         </div>
