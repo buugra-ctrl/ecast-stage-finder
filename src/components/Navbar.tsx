@@ -36,7 +36,7 @@ const Navbar = () => {
 
         <div className="flex items-center gap-4">
           <Button variant="contrastDark" className="hidden md:inline-flex">
-            Giriş Yap
+            GİRİŞ YAP
           </Button>
           <Button variant="contrastLight">
             Hemen Üye Ol
