@@ -48,7 +48,7 @@ const Testimonials = () => {
   }, [isAutoPlaying]);
 
   return (
-    <section id="testimonials" className="py-20 bg-[#002b54]">
+    <section id="testimonials" className="py-20 bg-[#eff2f5]">
       <div className="container">
         <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
           <h2 className="text-3xl md:text-5xl font-light">
@@ -73,7 +73,7 @@ const Testimonials = () => {
                     <CardContent className="pt-8 pb-6">
                       <div className="flex gap-1 mb-4">
                         {[...Array(testimonial.rating)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 fill-accent text-accent" />
+                          <Star key={i} className="h-5 w-5 fill-[#002b54] text-[#002b54]" />
                         ))}
                       </div>
                       
