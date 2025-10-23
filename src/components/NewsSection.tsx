@@ -32,7 +32,7 @@ const NewsSection = () => {
       <div className="container">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-center mb-16 gap-4">
           <div>
-            <h2 className="text-3xl md:text-5xl font-bold mb-4">
+            <h2 className="text-3xl md:text-5xl font-light mb-4">
               Haberler & Tavsiyeler
             </h2>
             <p className="text-lg text-muted-foreground">
