@@ -28,7 +28,7 @@ const HeroVideo = () => {
       {/* Content */}
       <div className="relative container h-full flex items-center">
         <div className="max-w-2xl text-white space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold leading-tight">
+          <h1 className="text-4xl md:text-6xl font-light leading-tight">
             Casting'in Geleceğine Hoş Geldiniz
           </h1>
           <p className="text-lg md:text-xl text-white/90">
