@@ -5,20 +5,21 @@ interface LogoProps {
   className?: string;
   scaleOnLoad?: boolean;
   scaleOnHover?: boolean;
+  scaleMultiplier?: number;
 }
 
-const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false }: LogoProps) => {
+const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleMultiplier = 1.25 }: LogoProps) => {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
     if (scaleOnLoad) {
       const timer = setTimeout(() => {
-        setScale(1.25);
+        setScale(scaleMultiplier);
       }, 500);
 
       return () => clearTimeout(timer);
     }
-  }, [scaleOnLoad]);
+  }, [scaleOnLoad, scaleMultiplier]);
 
   const handleMouseEnter = () => {
     if (scaleOnHover) {
