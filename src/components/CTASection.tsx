@@ -57,10 +57,10 @@ const CTASection = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-primary/90">
+              <Button size="lg" className="bg-primary hover:bg-[#2163b7]">
                 Hemen Üye Ol
               </Button>
-              <Button size="lg" variant="outline">
+              <Button size="lg" variant="outline" className="hover:bg-[#e2e6e8]">
                 Bİze Ulaşın
               </Button>
             </div>
