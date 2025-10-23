@@ -16,16 +16,16 @@ const Navbar = () => {
           </a>
 
           <div className="hidden md:flex gap-6">
-              <a href="#members" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              <a href="#members" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200">
               Üyelikler
             </a>
-            <a href="#about" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+            <a href="#about" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200">
               Hakkımızda
             </a>
-             <a href="#news" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+             <a href="#news" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200">
               Haberler & Tavsiyeler
             </a>
-            <a href="#testimonials" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+            <a href="#testimonials" className="text-sm font-medium text-primary hover:text-primary/80 transition-colors duration-200">
               İletişim
             </a>
           </div>
