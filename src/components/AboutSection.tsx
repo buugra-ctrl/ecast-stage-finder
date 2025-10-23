@@ -1,70 +1,89 @@
-import { Check } from "lucide-react";
+import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { Clapperboard, Users, Briefcase } from "lucide-react";
 
-const AboutSection = () => {
-  const stats = [
-    { value: "5,000", label: "Aktif Üye" },
-    { value: "500+", label: "Aylık Casting" },
-    { value: "200+", label: "Prodüksiyon" },
-    { value: "95%", label: "Başarı Oranı" },
-  ];
+const memberTypes = [
+  {
+    icon: Clapperboard,
+    title: "Cast Direktörleri",
+    description: "Yeni rol ilanları yayınlayın, başvuruları inceleyin ve prodüksiyonlarınız için mükemmel yetenekleri keşfedin.",
+    features: [
+      "Sınırsız rol ilanı yayınlama",
+      "Gelişmiş arama filtreleri",
+      "Yeteneklerle doğrudan iletişim",
+      "Proje yönetim araçları",
+    ],
+  },
+  {
+    icon: Users,
+    title: "Oyuncular",
+    description: "Profesyonel profilinizi oluşturun, çalışmalarınızı sergileyin ve heyecan verici fırsatlara başvurun.",
+    features: [
+      "Profesyonel portfolyo",
+      "Anlık casting bildirimleri",
+      "Fırsatlarını görüntüleme ve başvuru",
+      "Kariyer gelişim kaynakları",
+    ],
+  },
+  {
+    icon: Briefcase,
+    title: "Ajanlar",
+    description: "Yetenek kadronuzu yönetin, başvuruları takip edin ve casting fırsatlarıyla bağlantı kurun.",
+    features: [
+      "Çoklu müşteri yönetimi",
+      "Başvuru takibi",
+      "Yeni yetenek keşfi",
+      "Proje yönetimi ve takibi",
+    ],
+  },
+];
 
-  const features = [
-    "Dijital casting çağrıları ve başvurular",
-    "Yetenek ve casting yönetmenleri arasında doğrudan bağlantı",
-    "Güvenli profil yönetimi ve portfolyo vitrini",
-    "Yeni fırsatlar için anlık bildirimler",
-    "Sektör standardı araçlar ve kaynaklar",
-    "Şeffaf ve adil casting süreci",
-  ];
-
+const MemberTypes = () => {
   return (
-    <section id="about" className="py-20 bg-muted/30">
+    <section id="members" className="py-20 bg-[#002b54]">
       <div className="container">
-        <div className="text-left max-w-3xl mx-auto mb-16 space-y-4">
-          <h2 className="text-3xl md:text-5xl font-bold">
-            ecast nedir?
+        <div className="text-center max-w-3xl mx-auto mb-16 space-y-4">
+          <h2 className="text-3xl md:text-5xl font-bold text-white">
+            Üyelikler
           </h2>
-          <p className="text-lg text-muted-foreground">
-            ecast, oyuncuları, casting yönetmenlerini ve ajanları birbirine bağlayan kusursuz bir dijital 
-            platform oluşturarak eğlence sektöründe devrim yapıyor. Fırsatlara erişimi demokratikleştiriyor 
-            ve casting sürecini herkes için daha verimli, şeffaf ve kapsayıcı hale getiriyoruz.
-          </p>
         </div>
 
-        <div className="grid md:grid-cols-4 gap-8 mb-16">
-          {stats.map((stat, index) => (
-            <div
-              key={index}
-              className="text-center p-6 rounded-lg bg-background border border-border hover:border-primary transition-colors"
-            >
-              <div className="text-4xl font-bold text-primary mb-2">
-                {stat.value}
-              </div>
-              <div className="text-sm text-muted-foreground">
-                {stat.label}
-              </div>
-            </div>
-          ))}
-        </div>
-
-        <div className="max-w-4xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-6">
-            {features.map((feature, index) => (
-              <div
-                key={index}
-                className="flex items-start gap-3 p-4 rounded-lg hover:bg-background transition-colors"
-              >
-                <div className="flex-shrink-0 w-6 h-6 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Check className="h-4 w-4 text-primary" />
-                </div>
-                <span className="text-foreground">{feature}</span>
-              </div>
-            ))}
-          </div>
+        <div className="grid md:grid-cols-3 gap-8">
+          {memberTypes.map((type, index) => {
+            const Icon = type.icon;
+            return (
+              <Card key={index} className="bg-[#002b54] border-white text-white hover:shadow-xl transition-shadow min-h-full flex flex-col">
+                <CardHeader>
+                  <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4">
+                    <Icon className="h-6 w-6 text-white" />
+                  </div>
+                  <CardTitle className="text-2xl text-white">{type.title}</CardTitle>
+                  <CardDescription className="text-base text-white/80">
+                    {type.description}
+                  </CardDescription>
+                </CardHeader>
+                <CardContent className="flex-grow">
+                  <ul className="space-y-3">
+                    {type.features.map((feature, idx) => (
+                      <li key={idx} className="flex items-start gap-2 text-sm text-white">
+                        <div className="w-1.5 h-1.5 rounded-full bg-white mt-2" />
+                        <span>{feature}</span>
+                      </li>
+                    ))}
+                  </ul>
+                </CardContent>
+                <CardFooter className="mt-auto">
+                  <Button className="w-full bg-white text-[#002b54] hover:bg-white/90">
+                    Daha Fazla Bilgi
+                  </Button>
+                </CardFooter>
+              </Card>
+            );
+          })}
         </div>
       </div>
     </section>
   );
 };
 
-export default AboutSection;
+export default MemberTypes;
