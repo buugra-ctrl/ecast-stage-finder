@@ -66,7 +66,7 @@ const NewsSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary">
+                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:bg-[#eff2f5]">
                   Devamını Oku
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
