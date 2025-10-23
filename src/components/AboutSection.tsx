@@ -20,24 +20,14 @@ Sadece sektör profesyonelleri`;
           </p>
         </div>
 
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-8">
-            <div className="space-y-4">
-              {features.split('\n').slice(0, 3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <span className="text-[#002b54] text-xl">✓</span>
-                  <span className="text-lg text-muted-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
-            <div className="space-y-4">
-              {features.split('\n').slice(3).map((feature, index) => (
-                <div key={index + 3} className="flex items-start gap-3">
-                  <span className="text-[#002b54] text-xl">✓</span>
-                  <span className="text-lg text-muted-foreground">{feature}</span>
-                </div>
-              ))}
-            </div>
+        <div className="max-w-4xl mx-auto">
+          <div className="space-y-4">
+            {features.split('\n').map((feature, index) => (
+              <div key={index} className="flex items-center justify-center gap-3">
+                <span className="text-[#002b54] text-xl">✓</span>
+                <span className="text-lg text-muted-foreground text-center">{feature}</span>
+              </div>
+            ))}
           </div>
         </div>
       </div>
