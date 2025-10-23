@@ -143,13 +143,6 @@ const HeroVideo = () => {
                     >
                       Hemen Üye Ol
                     </Button>
-                    <Button
-                      size="lg"
-                      variant="outline"
-                      className="border-white text-white hover:bg-white/10"
-                    >
-                      Daha Fazla Bilgi
-                    </Button>
                   </div>
                 </div>
               </div>
