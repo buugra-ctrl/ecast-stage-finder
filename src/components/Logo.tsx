@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import logo from "@/assets/ecast-logo.png";
+import logo from "@/assets/logo.png";
 
 interface LogoProps {
   className?: string;
@@ -53,4 +53,3 @@ const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleM
 };
 
 export default Logo;
-
