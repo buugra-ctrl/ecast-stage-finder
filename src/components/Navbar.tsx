@@ -1,8 +1,17 @@
 import { Button } from "@/components/ui/button";
-import { Menu, X } from "lucide-react";
+import { Menu, X, ChevronDown } from "lucide-react";
 import { useRef, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
+import {
+  NavigationMenu,
+  NavigationMenuContent,
+  NavigationMenuItem,
+  NavigationMenuLink,
+  NavigationMenuList,
+  NavigationMenuTrigger,
+} from "@/components/ui/navigation-menu";
+import membershipImage from "@/assets/hero-casting.jpg";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -18,18 +27,60 @@ const Navbar = () => {
             <Logo />
           </a>
 
-          <div className="hidden md:flex gap-6">
+          <div className="hidden md:flex gap-6 items-center">
+            <NavigationMenu>
+              <NavigationMenuList>
+                <NavigationMenuItem>
+                  <NavigationMenuTrigger className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                    Üyelikler
+                  </NavigationMenuTrigger>
+                  <NavigationMenuContent>
+                    <div className="grid gap-3 p-6 w-[600px] grid-cols-[240px_1fr]">
+                      <div className="row-span-3">
+                        <img 
+                          src={membershipImage} 
+                          alt="Üyelikler" 
+                          className="w-full h-full object-cover rounded-lg"
+                        />
+                      </div>
+                      <Link to="/uyelikler/cast-direktorleri">
+                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">Cast Direktörleri</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Prodüksiyonlarınız için mükemmel yetenekleri keşfedin
+                          </p>
+                        </NavigationMenuLink>
+                      </Link>
+                      <Link to="/uyelikler/oyuncular">
+                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">Oyuncular</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Profesyonel profilinizi oluşturun ve fırsatlara başvurun
+                          </p>
+                        </NavigationMenuLink>
+                      </Link>
+                      <Link to="/uyelikler/menajerler">
+                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                          <div className="text-sm font-medium leading-none">Menajerler</div>
+                          <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
+                            Yetenek kadronuzu yönetin ve fırsatlara erişin
+                          </p>
+                        </NavigationMenuLink>
+                      </Link>
+                    </div>
+                  </NavigationMenuContent>
+                </NavigationMenuItem>
+              </NavigationMenuList>
+            </NavigationMenu>
+            
             {isHomePage ? (
               <>
-                <a href="#members" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-                  Üyelikler
-                </a>
                 <a href="#about" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
                   Hakkımızda
                 </a>
-                <a href="#news" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                <Link to="/haberler" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
                   Haberler & Tavsiyeler
-                </a>
+                </Link>
                 <a href="#faq" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
                   SSS
                 </a>
@@ -39,11 +90,11 @@ const Navbar = () => {
               </>
             ) : (
               <>
-                <Link to="/uyelikler" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-                  Üyelikler
-                </Link>
                 <Link to="/hakkimizda" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
                   Hakkımızda
+                </Link>
+                <Link to="/haberler" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  Haberler & Tavsiyeler
                 </Link>
                 <Link to="/iletisim" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
                   İletişim
@@ -74,40 +125,35 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden border-t border-white/20 bg-[#002b54]/90">
           <div className="container py-4 flex flex-col gap-4">
+            <Link to="/uyelikler/cast-direktorleri" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              Cast Direktörleri
+            </Link>
+            <Link to="/uyelikler/oyuncular" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              Oyuncular
+            </Link>
+            <Link to="/uyelikler/menajerler" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              Menajerler
+            </Link>
             {isHomePage ? (
               <>
-                <a href="#members" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  Üyelikler
-                </a>
                 <a href="#about" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
                   Hakkımızda
                 </a>
                 <a href="#faq" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
                   SSS
                 </a>
-                <a href="#testimonials" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  Referanslar
-                </a>
-                <a href="#news" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  Haberler & Tavsiyeler
-                </a>
-                <Link to="/iletisim" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  İletişim
-                </Link>
               </>
             ) : (
-              <>
-                <Link to="/uyelikler" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  Üyelikler
-                </Link>
-                <Link to="/hakkimizda" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  Hakkımızda
-                </Link>
-                <Link to="/iletisim" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  İletişim
-                </Link>
-              </>
+              <Link to="/hakkimizda" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                Hakkımızda
+              </Link>
             )}
+            <Link to="/haberler" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              Haberler & Tavsiyeler
+            </Link>
+            <Link to="/iletisim" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+              İletişim
+            </Link>
           </div>
         </div>
       )}

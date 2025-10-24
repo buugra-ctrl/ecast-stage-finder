@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const articles = [
   {
@@ -39,10 +40,12 @@ const NewsSection = () => {
               Sektör içgörüleri ve uzman rehberliği ile güncel kalın
             </p>
           </div>
-          <Button variant="outline" className="group hover:bg-[#e2e6e8] hover:text-[#002b54]">
-            Tüm Makaleleri Görüntüle
-            <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
-          </Button>
+          <Link to="/haberler">
+            <Button variant="outline" className="group hover:bg-[#e2e6e8] hover:text-[#002b54]">
+              Tüm Makaleleri Görüntüle
+              <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            </Button>
+          </Link>
         </div>
 
         <div className="grid md:grid-cols-3 gap-8">

@@ -74,7 +74,16 @@ const MemberTypes = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Link to="/uyelikler" className="w-full">
+                  <Link 
+                    to={
+                      type.title === "Cast Direktörleri" 
+                        ? "/uyelikler/cast-direktorleri"
+                        : type.title === "Oyuncular"
+                        ? "/uyelikler/oyuncular"
+                        : "/uyelikler/menajerler"
+                    } 
+                    className="w-full"
+                  >
                     <Button className="w-full bg-white text-[#002b54] hover:bg-[#e2e6e8] hover:text-[#002b54]">
                       Daha Fazla Bilgi
                     </Button>
