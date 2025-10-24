@@ -37,7 +37,7 @@ const Footer = () => {
             <a href="/" className="flex items-center mb-4">
               <div className="flex items-center h-26 w-26">
                 <img
-                  src="/src/assets/ecast-logo.png"
+                  src="/assets/ecast-logo.png"
                   alt="ecast"
                   className="h-26 w-26 object-contain"
                 />
