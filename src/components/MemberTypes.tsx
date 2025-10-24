@@ -1,6 +1,7 @@
 import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Clapperboard, Users, Briefcase } from "lucide-react";
+import { Link } from "react-router-dom";
 
 const memberTypes = [
   {
@@ -73,9 +74,11 @@ const MemberTypes = () => {
                   </ul>
                 </CardContent>
                 <CardFooter className="mt-auto">
-                  <Button className="w-full bg-white text-[#002b54] hover:bg-[#e2e6e8] hover:text-[#002b54]">
-                    Daha Fazla Bilgi
-                  </Button>
+                  <Link to="/uyelikler" className="w-full">
+                    <Button className="w-full bg-white text-[#002b54] hover:bg-[#e2e6e8] hover:text-[#002b54]">
+                      Daha Fazla Bilgi
+                    </Button>
+                  </Link>
                 </CardFooter>
               </Card>
             );

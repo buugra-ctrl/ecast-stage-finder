@@ -1,11 +1,14 @@
 import { Button } from "@/components/ui/button";
 import { Menu, X } from "lucide-react";
 import { useRef, useState } from "react";
+import { Link, useLocation } from "react-router-dom";
 import Logo from "./Logo";
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const navRef = useRef<HTMLDivElement | null>(null);
+  const location = useLocation();
+  const isHomePage = location.pathname === "/";
 
   return (
     <header className="sticky top-0 z-50 w-full bg-white/95 backdrop-blur-sm border-b border-gray-200 h-16 md:h-16 overflow-visible transition-all duration-300">
@@ -16,21 +19,37 @@ const Navbar = () => {
           </a>
 
           <div className="hidden md:flex gap-6">
-              <a href="#members" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-              Üyelikler
-            </a>
-            <a href="#about" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-              Hakkımızda
-            </a>
-             <a href="#news" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-              Haberler & Tavsiyeler
-            </a>
-            <a href="#faq" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-              SSS
-            </a>
-            <a href="#testimonials" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
-              İletişim
-            </a>
+            {isHomePage ? (
+              <>
+                <a href="#members" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  Üyelikler
+                </a>
+                <a href="#about" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  Hakkımızda
+                </a>
+                <a href="#news" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  Haberler & Tavsiyeler
+                </a>
+                <a href="#faq" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  SSS
+                </a>
+                <Link to="/iletisim" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  İletişim
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/uyelikler" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  Üyelikler
+                </Link>
+                <Link to="/hakkimizda" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  Hakkımızda
+                </Link>
+                <Link to="/iletisim" className="text-sm font-normal text-primary hover:text-primary/80 transition-colors duration-200">
+                  İletişim
+                </Link>
+              </>
+            )}
           </div>
         </div>
 
@@ -55,21 +74,40 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden border-t border-white/20 bg-[#002b54]/90">
           <div className="container py-4 flex flex-col gap-4">
-            <a href="#about" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Hakkımızda
-            </a>
-            <a href="#members" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Üyelikler
-            </a>
-            <a href="#faq" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              SSS
-            </a>
-            <a href="#testimonials" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Referanslar
-            </a>
-            <a href="#news" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-              Haberler & Tavsiyeler
-            </a>
+            {isHomePage ? (
+              <>
+                <a href="#members" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  Üyelikler
+                </a>
+                <a href="#about" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  Hakkımızda
+                </a>
+                <a href="#faq" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  SSS
+                </a>
+                <a href="#testimonials" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  Referanslar
+                </a>
+                <a href="#news" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  Haberler & Tavsiyeler
+                </a>
+                <Link to="/iletisim" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  İletişim
+                </Link>
+              </>
+            ) : (
+              <>
+                <Link to="/uyelikler" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  Üyelikler
+                </Link>
+                <Link to="/hakkimizda" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  Hakkımızda
+                </Link>
+                <Link to="/iletisim" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
+                  İletişim
+                </Link>
+              </>
+            )}
           </div>
         </div>
       )}

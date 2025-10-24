@@ -39,10 +39,10 @@ const Header = () => {
         </div>
 
         <div className="flex items-center gap-4">
-          <Button href="#login" whiteBackground={scrolled} className="hidden md:inline-flex">
+          <Button variant="contrastDark" className="hidden md:inline-flex">
             Giriş Yap
           </Button>
-          <Button href="#join" whiteBackground={false}>
+          <Button variant="contrastLight">
             Hemen Üye Ol
           </Button>
           

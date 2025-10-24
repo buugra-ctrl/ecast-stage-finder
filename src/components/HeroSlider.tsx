@@ -70,8 +70,7 @@ const HeroSlider = () => {
 							<div className="flex flex-wrap gap-4">
 								<Button
 									size="lg"
-									whiteBackground={false}
-									className="bg-[#002b54] hover:bg-[#001f3d]"
+									variant="contrastLight"
 								>
 									Hemen Üye Ol
 								</Button>
