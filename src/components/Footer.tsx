@@ -40,6 +40,7 @@ const Footer = () => {
                   src="/assets/ecast-logo.png"
                   alt="ecast"
                   className="h-26 w-26 object-contain"
+                  style={{ width: '104px', height: '104px' }}
                 />
               </div>
             </a>
