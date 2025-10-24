@@ -30,7 +30,7 @@ Sadece sektör profesyonelleri`;
                 </div>
               ))}
             </div>
-            <div className="space-y-4">
+            <div className="space-y-4 ml-16">
               {features.split('\n').slice(3).map((feature, index) => (
                 <div key={index} className="flex items-start gap-3">
                   <span className="text-[#002b54] text-xl mt-1">✓</span>
