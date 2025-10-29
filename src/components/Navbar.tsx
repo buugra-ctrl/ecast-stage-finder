@@ -41,7 +41,7 @@ const Navbar = () => {
             <NavigationMenu>
               <NavigationMenuList>
                 <NavigationMenuItem>
-                  <NavigationMenuTrigger className="text-sm font-normal text-[#002b54] transition-colors duration-200 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
+                  <NavigationMenuTrigger className="text-sm font-normal text-[#002b54] hover:text-[#00579e] hover:underline active:text-[#004884] active:underline transition-colors duration-200 bg-transparent hover:bg-transparent data-[state=open]:bg-transparent">
                     Üyelikler
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>
