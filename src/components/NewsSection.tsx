@@ -71,7 +71,7 @@ const NewsSection = () => {
               <CardContent>
                 <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-[#002b54] hover:text-[#00579e] hover:underline rounded-none">
                   Devamını Oku
-                  <ArrowRight className="ml-2 h-4 w-4  transition-transform" />
+                    <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 " />
                 </Button>
               </CardContent>
             </Card>
