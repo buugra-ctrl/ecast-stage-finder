@@ -84,7 +84,7 @@ const MemberTypes = () => {
                     } 
                     className="w-full"
                   >
-                    <Button className="w-full bg-white text-[#002b54] hover:bg-[#eef1f4] active:bg-[#eef1f4]">
+                    <Button variant="contrastDark" className="hidden md:inline-flex">
                       Daha Fazla Bilgi
                     </Button>
                   </Link>
