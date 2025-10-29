@@ -8,7 +8,7 @@ const HeroSlider = () => {
 		<>
 			<section className="relative w-full h-[600px] md:h-[700px]">
 				<div
-					className="absolute inset-0 bg-cover bg-center"
+					className="absolute inset-0 bg-cover bg-center bg-blue-800"
 					style={{ backgroundImage: `url(${Guzel1_banner1})` }}
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
@@ -32,7 +32,7 @@ const HeroSlider = () => {
 
 			<section className="relative w-full h-[600px] md:h-[700px]">
 				<div
-					className="absolute inset-0 bg-cover bg-center"
+					className="absolute inset-0 bg-cover bg-center bg-green-800"
 					style={{ backgroundImage: `url(${Guzel2_banner2})` }}
 				>
 					<div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/50 to-transparent" />
