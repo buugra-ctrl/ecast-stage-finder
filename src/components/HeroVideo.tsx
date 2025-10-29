@@ -67,9 +67,7 @@ const HeroSlider = () => {
 								<Button size="lg" variant="contrastLight">
 									Hemen Üye Ol
 								</Button>
-								<Button size="lg" variant="outline" className="border-[#002b54] text-[#002b54] bg-transparent hover:border-[#eef1f4] hover:text-[#002b54] active:border-[#eef1f4] active:text-[#002b54] text-white border-white hover:bg-white/20 hover:border-white">
-									Daha Fazla Bilgi
-								</Button>
+							
 							</div>
 						</div>
 					</div>
