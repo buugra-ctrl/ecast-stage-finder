@@ -1,4 +1,4 @@
-import { Check } from "lucide-react";
+import lifeCheckImage from "@/assets/life_ceckk.png";
 
 const AboutSection = () => {
   const features = `Profesyonel profil yönetimi ve portfolyo vitrini
