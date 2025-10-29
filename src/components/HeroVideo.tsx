@@ -68,7 +68,7 @@ const HeroSlider = () => {
 				</div>
 			))}
 
-			<div className="absolute inset-x-0 bottom-24 flex justify-left">
+			<div className="absolute inset-x-0 bottom-24 flex justify-center">
 				<div className="flex flex-wrap gap-4">
 					<Button size="lg" variant="contrastLight">
 						Hemen Üye Ol
