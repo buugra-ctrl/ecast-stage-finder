@@ -20,7 +20,7 @@ const CTASection = () => {
               Hikayeniz burada başlıyor!
             </h2>
             <p className="text-lg text-muted-foreground">
-              Güncel projeleri takip etmek, kariyer fırsatları yaratmak ve 
+              Güncel projeleri takip etmek, kariyer fırsatları yaratmak ve
               en iyi yetenekleri bulmak için ecast kullanan sektör profesyoneline katılın.
             </p>
             
@@ -57,10 +57,10 @@ const CTASection = () => {
             </div>
 
             <div className="flex flex-wrap gap-4 pt-4">
-              <Button size="lg" className="bg-primary hover:bg-[#2163b7]">
+              <Button size="lg" className="bg-[#002b54] text-white hover:bg-[#00579e] active:bg-[#004884]">
                 Hemen Üye Ol
               </Button>
-              <Button size="lg" variant="outline" className="border-[#2163b7] text-[#2163b7] hover:bg-[#e2e6e8] hover:text-[##2163b7]">
+              <Button size="lg" variant="outline">
                 Bİze Ulaşın
               </Button>
             </div>
