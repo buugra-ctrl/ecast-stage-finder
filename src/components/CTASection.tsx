@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { ArrowRight } from "lucide-react";
-import ctaJoin from "@/assets/cta-join.jpg";
+import ctaJoin from "@/assets/cta-join.png";
 
 const CTASection = () => {
   return (
