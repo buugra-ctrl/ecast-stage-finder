@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import Guzel_1_banner1 from "@/assets/Guzel_1_banner1.png";
-import Guzel_2_banner2 from "@/assets/Guzel_2_banner2.png";
-import Guzel_3_banner3 from "@/assets/Guzel_3_banner3.png";
+import Guzel_1_banner1 from "@/assets/Guzel 1_banner1.png";
+import Guzel_2_banner2 from "@/assets/Guzel 2_banner2.png";
+import Guzel_3_banner3 from "@/assets/Guzel 3_banner3.png";
 
 const slides = [
 	{
