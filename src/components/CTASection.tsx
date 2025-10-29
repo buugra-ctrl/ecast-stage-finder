@@ -60,7 +60,7 @@ const CTASection = () => {
               <Button size="lg" className="bg-[#002b54] text-white hover:bg-[#00579e] active:bg-[#004884]">
                 Hemen Üye Ol
               </Button>
-              <Button size="lg" variant="outline">
+              <Button variant="contrastDark" className="hidden md:inline-flex">
                 Bİze Ulaşın
               </Button>
             </div>
