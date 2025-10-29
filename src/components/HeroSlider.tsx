@@ -1,23 +1,22 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import heroCasting from "@/assets/hero-casting.jpg";
+import Guzel_1_banner1 from "@/assets/Guzel_1_banner1.jpg";
+import Guzel_2_banner2 from "@/assets/Guzel_2_banner2.jpg";
+import Guzel_3_banner3 from "@/assets/Guzel_3_banner3.jpg";
 
 const slides = [
 	{
-		image: heroCasting,
-		title: "Casting'in Geleceğine Hoş Geldiniz",
-		subtitle: "Sinema, TV ve tiyatroda yeteneği fırsatla buluşturuyoruz",
+		image: Guzel_1_banner1,
+		title: "Süreçler dijitalleşiyor, hız, şeffaflık ve erişilebilirlik kazanıyor.",
 	},
 	{
-		image: heroCasting,
-		title: "Casting Sürecinizi Dijitalleştirin",
-		subtitle: "Seçmeleri kolaylaştırın ve istisnai yetenekleri verimli bir şekilde keşfedin",
+		image: Guzel_2_banner2,
+		title: "Oyuncular, cast direktörleri ve menajerler için tek dijital buluşma noktası.",
 	},
 	{
-		image: heroCasting,
-		title: "Binlerce Sektör Profesyoneline Katılın",
-		subtitle: "Oyuncular, casting yönetmenleri ve ajanlar tek bir platformda bir arada",
+		image: Guzel_3_banner3,
+		title: "Yetenekli oyuncu, doğru proje, şeffaf yönetim.",
 	},
 ];
 
@@ -64,13 +63,10 @@ const HeroSlider = () => {
 							<h1 className="text-4xl md:text-6xl font-bold leading-tight">
 								{slide.title}
 							</h1>
-							<p className="text-lg md:text-xl text-white/90">
-								{slide.subtitle}
-							</p>
 							<div className="flex flex-wrap gap-4">
 								<Button
 									size="lg"
-									variant="contrastLight"
+									className="bg-[#002b54] text-white hover:bg-[#00579e] active:bg-[#004884]"
 								>
 									Hemen Üye Ol
 								</Button>
