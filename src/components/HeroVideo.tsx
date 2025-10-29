@@ -63,16 +63,21 @@ const HeroSlider = () => {
 							<h1 className="text-4xl md:text-6xl font-bold leading-tight">
 								{slide.title}
 							</h1>
-							<div className="flex flex-wrap gap-4">
-								<Button size="lg" variant="contrastLight">
-									Hemen Üye Ol
-								</Button>
-							
-							</div>
 						</div>
 					</div>
 				</div>
 			))}
+
+			<div className="absolute inset-x-0 bottom-24 flex justify-center">
+				<div className="flex flex-wrap gap-4">
+					<Button size="lg" variant="contrastLight">
+						Hemen Üye Ol
+					</Button>
+					<Button size="lg" variant="outline" className="border-[#002b54] text-[#002b54] bg-transparent hover:border-[#eef1f4] hover:text-[#002b54] active:border-[#eef1f4] active:text-[#002b54] text-white border-white hover:bg-white/20 hover:border-white">
+						Daha Fazla Bilgi
+					</Button>
+				</div>
+			</div>
 
 			<button
 				onClick={prevSlide}
