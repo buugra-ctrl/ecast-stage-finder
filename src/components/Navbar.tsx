@@ -54,7 +54,7 @@ const Navbar = () => {
                         />
                       </div>
                       <Link to="/uyelikler/cast-direktorleri" onMouseEnter={() => setCurrentImage(memberImages['cast-direktorleri'])}>
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#E2E6E8] hover:text-[#002B54] focus:bg-[#E2E6E8] focus:text-[#002B54] text-[#002B54]">
                           <div className="text-sm font-medium leading-none">Cast Direktörleri</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Projeleriniz için kriterlerinizi girin ve en iyi yetenekleri keşfedin
@@ -62,7 +62,7 @@ const Navbar = () => {
                         </NavigationMenuLink>
                       </Link>
                       <Link to="/uyelikler/oyuncular" onMouseEnter={() => setCurrentImage(memberImages['oyuncular'])}>
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#E2E6E8] hover:text-[#002B54] focus:bg-[#E2E6E8] focus:text-[#002B54] text-[#002B54]">
                           <div className="text-sm font-medium leading-none">Oyuncular</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Profesyonel profilinizi oluşturun ve sektörde yerinizi edinin
@@ -70,7 +70,7 @@ const Navbar = () => {
                         </NavigationMenuLink>
                       </Link>
                       <Link to="/uyelikler/menajerler" onMouseEnter={() => setCurrentImage(memberImages['menajerler'])}>
-                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground">
+                        <NavigationMenuLink className="block select-none space-y-1 rounded-md p-3 leading-none no-underline outline-none transition-colors hover:bg-[#E2E6E8] hover:text-[#002B54] focus:bg-[#E2E6E8] focus:text-[#002B54] text-[#002B54]">
                           <div className="text-sm font-medium leading-none">Menajerler</div>
                           <p className="line-clamp-2 text-sm leading-snug text-muted-foreground">
                             Oyuncu kataloğunuzu yönetin ve fırsatlara erişin
