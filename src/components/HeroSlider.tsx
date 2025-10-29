@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import Guzel 1_banner1 from "@/assets/Guzel 1_banner1.png";
-import Guzel 2_banner2 from "@/assets/Guzel 2_banner2.png";
-import Guzel 3_banner3 from "@/assets/Guzel 3_banner3.png";
+import Guzel 1_banner1 from "@/assets/Guzel_1_banner1.png";
+import Guzel 2_banner2 from "@/assets/Guzel_2_banner2.png";
+import Guzel 3_banner3 from "@/assets/Guzel_3_banner3.png";
 
 const slides = [
 	{
@@ -69,7 +69,6 @@ const HeroSlider = () => {
 									Hemen Üye Ol
 								</Button>
 								<Button
-									size="lg"
 									variant="outline"
 									className="border-white text-white hover:bg-white/10"
 								>
