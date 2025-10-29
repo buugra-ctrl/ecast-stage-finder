@@ -64,7 +64,7 @@ const HeroSlider = () => {
 								{slide.title}
 							</h1>
 							<div className="flex flex-wrap gap-4">
-								variant="contrastLight">
+								<Button variant="contrastLight">
 									Hemen Üye Ol
 								</Button>
 
