@@ -1,9 +1,9 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import Guzel1_banner1 from "@/assets/Guzel1_banner1.png";
-import Guzel2_banner2 from "@/assets/Guzel2_banner2.png";
-import Guzel3_banner3 from "@/assets/Guzel3_banner3.png";
+import Guzel1_banner1 from "@/assets/Guzel_1_banner1.png";
+import Guzel2_banner2 from "@/assets/Guzel_2_banner2.png";
+import Guzel3_banner3 from "@/assets/Guzel_3_banner3.png";
 
 const slides = [
 	{
@@ -64,10 +64,12 @@ const HeroSlider = () => {
 								{slide.title}
 							</h1>
 							<div className="flex flex-wrap gap-4">
-								<Button variant="contrastLight">
+								<Button size="lg" variant="contrastLight">
 									Hemen Üye Ol
 								</Button>
-
+								<Button size="lg" variant="outline" className="border-white text-white hover:bg-white/10">
+									Daha Fazla Bilgi
+								</Button>
 							</div>
 						</div>
 					</div>
