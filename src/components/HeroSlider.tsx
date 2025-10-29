@@ -1,21 +1,21 @@
 import { Button } from "@/components/ui/button";
 import { ChevronLeft, ChevronRight } from "lucide-react";
 import { useState, useEffect } from "react";
-import Guzel 1_banner1 from "@/assets/Guzel_1_banner1.png";
-import Guzel 2_banner2 from "@/assets/Guzel_2_banner2.png";
-import Guzel 3_banner3 from "@/assets/Guzel_3_banner3.png";
+import Guzel1_banner1 from "@/assets/Guzel_1_banner1.png";
+import Guzel2_banner2 from "@/assets/Guzel_2_banner2.png";
+import Guzel3_banner3 from "@/assets/Guzel_3_banner3.png";
 
 const slides = [
 	{
-		image: Guzel 1_banner1,
+		image: Guzel1_banner1,
 		title: "Süreçler dijitalleşiyor, hız, şeffaflık ve erişilebilirlik kazanıyor.",
 	},
 	{
-		image: Guzel 2_banner2,
+		image: Guzel2_banner2,
 		title: "Oyuncular, cast direktörleri ve menajerler için tek dijital buluşma noktası.",
 	},
 	{
-		image: Guzel 3_banner3,
+		image: Guzel3_banner3,
 		title: "Yetenekli oyuncu, doğru proje, şeffaf yönetim.",
 	},
 ];
