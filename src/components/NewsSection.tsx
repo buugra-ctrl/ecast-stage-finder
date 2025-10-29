@@ -41,7 +41,7 @@ const NewsSection = () => {
             </p>
           </div>
           <Link to="/haberler">
-            <Button variant="outline" className="group hover:bg-[#e2e6e8] hover:text-[#002b54]">
+            <Button variant="outline" className="group">
               Tüm Makaleleri Görüntüle
               <ArrowRight className="ml-2 h-4 w-4 group-hover:translate-x-1 transition-transform" />
             </Button>
@@ -69,7 +69,7 @@ const NewsSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:bg-[#eff2f5] hover:text-[#002b54] rounded-none">
+                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-primary hover:bg-[#eef1f4] hover:text-[#002b54] rounded-none">
                   Devamını Oku
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
