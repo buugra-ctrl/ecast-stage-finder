@@ -68,12 +68,7 @@ const HeroSlider = () => {
 									variant="contrastDark" className="hidden md:inline-flex">
 									Hemen Üye Ol
 								</Button>
-								<Button
-									variant="outline"
-									className="border-white text-white hover:bg-white/10"
-								>
-									Daha Fazla Bilgi
-								</Button>
+
 							</div>
 						</div>
 					</div>
