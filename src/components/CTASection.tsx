@@ -20,7 +20,7 @@ const CTASection = () => {
               Hikayeniz burada başlıyor!
             </h2>
             <p className="text-lg text-muted-foreground">
-              En iyi yapımları takip etmek, kariyer fırsatları yaratmak ve 
+              Güncel projeleri takip etmek, kariyer fırsatları yaratmak ve 
               en iyi yetenekleri bulmak için ecast kullanan sektör profesyoneline katılın.
             </p>
             
