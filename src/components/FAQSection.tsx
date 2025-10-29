@@ -85,7 +85,7 @@ const FAQSection = () => {
 
         {faqs.length > 4 && (
           <div className="text-center mt-8">
-            <Button onClick={() => setShowMore(!showMore)} variant="default" className="hover:bg-[#2163b7]">
+            <Button onClick={() => setShowMore(!showMore)} variant="contrastLight">
               {showMore ? "Daha Az Göster" : "Daha Fazla"}
             </Button>
           </div>
