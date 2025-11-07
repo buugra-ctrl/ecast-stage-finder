@@ -29,8 +29,8 @@ const Footer = () => {
 
   return (
     <footer className="bg-muted/50 border-t border-border">
-      <div className="container py-12">
-        <div className="grid grid-cols-1 md:grid-cols-5 gap-8 mb-12">
+      <div className="container py-8">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-6 mb-8">
           <div className="md:col-span-1">
             <a href="/" className="flex items-center mb-4">
               <Logo />
@@ -89,7 +89,7 @@ const Footer = () => {
           ))}
         </div>
 
-        <div className="border-t border-border pt-8">
+        <div className="border-t border-border pt-6">
           <div className="flex flex-col md:flex-row justify-between items-center gap-4">
             <p className="text-sm text-muted-foreground">
               © {currentYear} ecast. Tüm hakları saklıdır.
