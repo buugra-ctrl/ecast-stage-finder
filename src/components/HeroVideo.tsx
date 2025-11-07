@@ -8,15 +8,18 @@ import Guzel3_banner3 from "@/assets/Guzel3_banner3.png";
 const slides = [
 	{
 		image: Guzel1_banner1,
-		title: "Süreçler dijitalleşiyor, hız, şeffaflık ve erişilebilirlik kazanıyor.",
+		title: "Yeni Nesil Cast Yönetimi",
+		subtitle: "Süreçler dijitalleşiyor, hız, şeffaflık ve erişilebilirlik kazanıyor.",
 	},
 	{
 		image: Guzel2_banner2,
-		title: "Oyuncular, cast direktörleri ve menajerler için tek dijital buluşma noktası.",
+		title: "Sektörün Dijital Devrimi",
+		subtitle: "Oyuncular, cast direktörleri ve menajerler için tek dijital buluşma noktası.",
 	},
 	{
 		image: Guzel3_banner3,
-		title: "Yetenekli oyuncu, doğru proje, şeffaf yönetim.",
+		title: "Profesyonel Casting Platformu",
+		subtitle: "Yetenekli oyuncu, doğru proje, şeffaf yönetim.",
 	},
 ];
 
@@ -60,21 +63,26 @@ const HeroSlider = () => {
 
 					<div className="relative container h-full flex items-center">
 						<div className="max-w-2xl text-white space-y-6 animate-fade-in">
-							<h1 className="text-4xl md:text-6xl font-bold leading-tight">
-								{slide.title}
-							</h1>
+							<div className="space-y-4">
+								<h1 className="text-4xl md:text-6xl font-bold leading-tight">
+									{slide.title}
+								</h1>
+								<p className="text-xl md:text-2xl text-white/90">
+									{slide.subtitle}
+								</p>
+							</div>
+							<div className="flex flex-wrap gap-4 ml-12 -mt-20">
+								<Button size="lg" variant="contrastLight">
+									Hemen Üye Ol
+								</Button>
+								<Button size="lg" variant="outline" className="border-[#002b54] text-[#002b54] bg-transparent hover:border-[#eef1f4] hover:text-[#002b54] active:border-[#eef1f4] active:text-[#002b54] text-white border-white hover:bg-white/20 hover:border-white">
+									Daha Fazla Bilgi
+								</Button>
+							</div>
 						</div>
 					</div>
 				</div>
 			))}
-
-			<div className="absolute inset-x-0 bottom-24 flex justify-center">
-				<div className="flex flex-wrap gap-4">
-					<Button size="lg" variant="contrastLight">
-						Hemen Üye Ol
-					</Button>
-				</div>
-			</div>
 
 			<button
 				onClick={prevSlide}
