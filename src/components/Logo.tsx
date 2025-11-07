@@ -6,9 +6,10 @@ interface LogoProps {
   scaleOnLoad?: boolean;
   scaleOnHover?: boolean;
   scaleMultiplier?: number;
+  size?: 'default' | 'large';
 }
 
-const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleMultiplier = 1.25 }: LogoProps) => {
+const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleMultiplier = 1.25, size = 'default' }: LogoProps) => {
   const [scale, setScale] = useState(1);
 
   useEffect(() => {
@@ -33,16 +34,18 @@ const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleM
     }
   };
 
+  const sizeClasses = size === 'large' ? 'h-36 w-36' : 'h-28 w-28';
+
   return (
     <div
-      className={`flex items-center h-28 w-28 ${className}`}
+      className={`flex items-center ${sizeClasses} ${className}`}
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
     >
       <img
         src={logo}
         alt="ecast"
-        className="h-28 w-28 object-contain transition-transform duration-300 ease-out will-change-transform"
+        className={`${sizeClasses} object-contain transition-transform duration-300 ease-out will-change-transform`}
         style={{
           transform: `scale(${scale})`,
           transformOrigin: 'center',
