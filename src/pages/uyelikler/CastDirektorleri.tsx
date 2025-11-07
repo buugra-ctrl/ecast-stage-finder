@@ -11,19 +11,24 @@ const CastDirektorleri = () => {
       <Navbar />
       <main>
         {/* Hero Banner */}
-        <section className="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
+        <section className="relative h-[500px] md:h-[600px] flex items-center overflow-hidden">
           <div className="absolute inset-0">
             <img 
               src={heroCastImage} 
               alt="Cast Direktörleri" 
               className="w-full h-full object-cover"
             />
-            <div className="absolute inset-0 bg-gradient-to-r from-primary/80 to-primary/40" />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
           </div>
-          <div className="container relative z-10 text-center">
-            <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-6">
-              Sektörün En İyileriyle Çalışın
-            </h1>
+          <div className="container relative z-10">
+            <div className="max-w-2xl">
+              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8">
+                Sektörün En İyileriyle Çalışın
+              </h1>
+              <Button size="lg" variant="contrastDark" className="shadow-lg">
+                Hemen Üye Ol
+              </Button>
+            </div>
           </div>
         </section>
 
