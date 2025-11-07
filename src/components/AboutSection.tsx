@@ -24,16 +24,16 @@ Sadece sektör profesyonelleri`;
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 ml-16">
               {features.split('\n').slice(0, 3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <img src={lifeCheckImage} alt="check" className="w-6 h-6 mt-1" />
+                <div key={index} className="flex items-start gap-2">
+                  <img src={lifeCheckImage} alt="check" className="w-5 h-5" />
                   <span className="text-lg text-muted-foreground">{feature}</span>
                 </div>
               ))}
             </div>
             <div className="space-y-4 ml-16">
               {features.split('\n').slice(3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
-                  <img src={lifeCheckImage} alt="check" className="w-6 h-6 mt-1" />
+                <div key={index} className="flex items-start gap-2">
+                  <img src={lifeCheckImage} alt="check" className="w-5 h-5" />
                   <span className="text-lg text-muted-foreground">{feature}</span>
                 </div>
               ))}
