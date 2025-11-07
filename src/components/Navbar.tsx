@@ -17,9 +17,9 @@ import fotoOyuncu from "@/assets/Foto_oyuncu.jpg";
 import fotoCastDire from "@/assets/Foto_castdire.jpg";
 
 const memberImages = {
-  'cast-direktorleri': fotoMenajer2,
+  'cast-direktorleri': fotoCastDire,
   'oyuncular': fotoOyuncu,
-  'menajerler': fotoCastDire,
+  'menajerler': fotoMenajer2,
 };
 
 const Navbar = () => {
