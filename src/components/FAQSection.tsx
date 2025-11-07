@@ -8,32 +8,36 @@ const FAQSection = () => {
 
   const faqs = [
     {
-      question: "ecast nedir?",
-      answer: "ecast, casting yönetmenleri, oyuncular ve ajanlar için kapsamlı bir dijital platformdur.",
+      question: "ecast nedir ve kimler kullanabilir?",
+      answer: "ecast; oyuncular, cast direktörleri ve menajerlerin bir arada bulunduğu, sinema, dizi ve tiyatro projelerinin cast süreçlerini dijitalleştiren profesyonel bir platformdur. Sadece belirli kriterleri karşılayan profesyonel oyuncular kabul edilir.",
     },
     {
-      question: "Ücretsiz üye olabilir miyim?",
-      answer: "Evet, ücretsiz üyelik ile temel özelliklere erişebilirsiniz.",
+      question: "Üyelik ücretli mi?",
+      answer: "ecast, farklı kullanıcı tipleri için ayrı üyelik planları sunar. Oyuncular için temel profil oluşturma ücretsizdir; ancak gelişmiş görünürlük, video yükleme ve ilan başvuru hakları ücretli üyelik paketindedir. Cast direktörleri ve menajerler için profesyonel erişim planları hakkında bilgileri ilgili sayfalardan erişebilirsiniz. Üyelik ücretimiz aylık ya da yıllık bazda, kredi kartı ile ödenmektedir.",
     },
     {
-      question: " NASIL casting çağrısı yayınlayabilirim?",
-      answer: "Özel panelinizden kolayca yeni casting çağrısı oluşturabilirsiniz.",
+      question: "Üyelik kritlerleri nelerdir?",
+      answer: "ecast, yalnızca sektör profesyonellerine hizmet etmeyi ve casting süreçlerinde güvenilir bir ortam oluşturmayı hedefleyen bir platformdur. Bu nedenle, hem oyunculardan hem menajerlerden hem de cast direktörlerinden profesyonelliklerini kanıtlayan belirli kriterleri karşılamalarını bekleriz. Oyuncular için bu kriterler eğitim, deneyim veya referans, cast direktörleri ve menajerler için ise bir tüzel kişiliğe bağlı olarak çalışma şartını içerir.",
     },
     {
-      question: "Portfolyo nasıl güncellenir?",
-      answer: "Profil bölümünüzden portfolyo resimlerinizi ve videolarınızı yükleyebilirsiniz.",
+      question: "Yetkinlik doğrulama süreci nasıl ilerliyor?",
+      answer: "Yetkinlik doğrulama başvurusu sırasında ilettiğin belgeler ve bilgiler, ekibimiz tarafından titizlikle incelenir. Ortalama 5 iş günü içinde doğrulama süreci tamamlanır ve sonucu sana e-posta veya bildirim yoluyla iletiriz.",
     },
     {
-      question: "Ajan olarak nasıl üye olabilirim?",
-      answer: "Kayıt sayfasında ajans tipini seçerek üye olabilirsiniz.",
+      question: "Verilerin güvenliği ve gizliliği nasıl sağlanıyor?",
+      answer: "Tüm kullanıcı verileri KVKK standartlarına uygun şekilde saklanır. Profil bilgilerin, yalnızca cast direktörleri ve menajerler tarafından görüntülenir; üçüncü taraflarla kullanıcı rızası olmadan paylaşılmaz. Ancak dilersen, oluşturduğun profil için sana özel bağlantı adresi yaratabilir, bunu üçüncü taraflarla paylaşabilirsin.",
     },
     {
-      question: "Fiyatlandırma nasıl çalışır?",
-      answer: "Farklı paketlerimiz bulunmakta, detaylar için lütfen bizimle iletişime geçin.",
+      question: "ecast, cast ajansı mıdır?",
+      answer: "Hayır. ecast bir ajans değildir; menajerlerin, cast direktörlerinin ve oyuncuların eşit koşullarda yer alabildiği bağımsız bir dijital platformdur.\nSektör profesyonelleri için geliştirilmiş olan ecast, casting süreçlerini optimize etmek, dijitalleştirmek ve demokratikleştirmek amacıyla kurulmuştur. Hiçbir zaman oyuncu temsil etmez, herhangi bir kullanıcıya ayrıcalık tanımaz ve üyelerine iş bulma taahhütü veremez.",
+    },
+    {
+      question: "Profesyonel olmayan oyuncular başvuramaz mı?",
+      answer: "Şimdilik hayır. ecast yalnızca belirli kriterleri karşılayan profesyonelleri kabul eder. Ancak gelecekte genç yetenekler için ayrı bir \"gelişim modu\" planlanmaktadır.",
     },
   ];
 
-  const displayedFaqs = showMore ? faqs : faqs.slice(0, 4);
+  const displayedFaqs = showMore ? faqs : faqs.slice(0, 5);
 
   const toggleItem = (index: number) => {
     const newOpenItems = new Set(openItems);
