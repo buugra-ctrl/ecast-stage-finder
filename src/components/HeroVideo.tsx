@@ -71,18 +71,13 @@ const HeroSlider = () => {
 									{slide.subtitle}
 								</p>
 							</div>
+							<Button size="lg" variant="contrastLight" className="shadow-lg">
+								Hemen Üye Ol
+							</Button>
 						</div>
 					</div>
 				</div>
 			))}
-
-			<div className="absolute right-1/3 bottom-32 flex">
-				<div className="flex flex-wrap gap-4 ml-12 -mt-20">
-					<Button size="lg" variant="contrastLight">
-						Hemen Üye Ol
-					</Button>
-				</div>
-			</div>
 
 			<button
 				onClick={prevSlide}
