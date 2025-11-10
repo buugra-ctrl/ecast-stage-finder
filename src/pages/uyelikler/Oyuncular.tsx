@@ -148,7 +148,7 @@ const Oyuncular = () => {
                         <span className="text-base">2 adet resim koyma hakkı</span>
                       </div>
                     </div>
-                    <Button variant="outline" className="w-full" size="lg">
+                    <Button variant="outline" className="w-full" size="default">
                       Hemen Üye Ol
                     </Button>
                   </CardContent>
