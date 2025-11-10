@@ -4,13 +4,13 @@ import { ChevronDown, ChevronUp } from "lucide-react";
 
 const FAQSection = () => {
   const [showMore, setShowMore] = useState(false);
-  const [openItems, setOpenItems] = useState<Set<number>>(new Set([0, 1, 2, 3, 4]));
+  const [openItems, setOpenItems] = useState<Set<number>>(new Set());
 
   useEffect(() => {
     if (showMore) {
       setOpenItems(prev => new Set([...prev, 5, 6]));
     } else {
-      setOpenItems(new Set([0, 1, 2, 3, 4]));
+      setOpenItems(new Set());
     }
   }, [showMore]);
 
