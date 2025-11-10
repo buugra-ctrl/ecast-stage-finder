@@ -10,6 +10,7 @@ const Footer = () => {
           {/* Logo & Info */}
           <div className="flex flex-col justify-between h-full">
             <Link to="/">
+              <Logo scaleOnLoad={false} size="large" />
               <Logo scaleOnLoad={false} size="default" />
             </Link>
             <div>
