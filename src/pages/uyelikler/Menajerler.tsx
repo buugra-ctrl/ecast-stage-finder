@@ -22,29 +22,12 @@ const Menajerler = () => {
           </div>
           <div className="container relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8">
-                Portföyünüzü En İyilerle Buluşturun
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8">
+                İşini dijitale taşı, hem zaman hem verim kazan!
               </h1>
-              <Button size="lg" variant="contrastDark" className="shadow-lg">
-                Hemen Üye Ol
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-5xl font-light text-foreground">
-                Yeni Projeler, Yeni Başarılar
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Platforma katılın, oyuncu portföyünüzü yönetin ve en prestijli projelerden ilk siz haberdar olun.
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                ecast ile oyuncu arama, değerlendirme ve seçme süreçlerini tek platformdan yönet. Kapsamlı arama filtreleri, portfolyo görüntüleme ve favori listeleriyle süreçlerini hızlandır.
               </p>
-              <Button size="lg" variant="contrastLight" className="mt-8">
-                Hemen Üye Ol
-              </Button>
             </div>
           </div>
         </section>
@@ -54,37 +37,90 @@ const Menajerler = () => {
           <div className="container">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-light text-center mb-16">
-                İş Akışınızı Kolaylaştırın
+                Tüm Oyuncularını Tek Platformdan Yönet
               </h2>
-              
-              <div className="grid md:grid-cols-2 gap-12">
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                ecast, menajerlerin portföylerindeki oyuncuları kolayca yönetmesini, uygun projelere yönlendirmesini ve yeni yetenekleri keşfetmesini sağlar. Tüm süreçler artık tek ekranda, kontrol sende.
+              </p>
+
+              <div className="grid md:grid-cols-1 gap-12">
                 <div className="space-y-6">
                   <h3 className="text-2xl md:text-3xl font-light text-foreground">
-                    Merkezi Yönetim
-                  </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base md:text-lg">Tüm oyuncu portföyünüzü tek bir panelden yönetin.</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base md:text-lg">Cast direktörlerinden gelen projelere kolayca başvuru yapın.</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base md:text-lg">Oyuncularınızın profillerini güncel ve eksiksiz tutun.</span>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="space-y-4">
-                  <h3 className="text-2xl md:text-3xl font-light text-foreground">
-                    Sadece Sektör Profesyonelleri
+                    Portföy Yönetimi ve Takip
                   </h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Platformumuz, sadece sektör profesyonellerinin bir araya geldiği bir ağdır. Bu sayede, oyuncularınız için sadece ciddi ve kaliteli projelerle zaman harcarsınız.
+                    Temsil ettiğin oyuncuların profillerini oluştur, bilgilerini güncel tut ve başvurularını tek panelden takip et. Tüm portföyünü profesyonelce organize et.
                   </p>
+                </div>
+
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-light text-foreground">
+                    Yeni Yetenek Keşfi
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Ecast, yalnızca doğrulanmış profesyonellerin yer aldığı oyuncu havuzuyla, portföyünü genişletmen için sana güçlü bir keşif alanı sunar. Geleceğin yüzlerini ilk sen fark et.
+                  </p>
+                </div>
+
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-light text-foreground">
+                    Akıllı ve Hızlı Yönetim Araçları
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Favori listeleri, not alma ve oyuncu karşılaştırma gibi özelliklerle süreçlerini hızlandır. Ecast, menajerlik deneyimini dijital çağın kolaylığıyla buluşturur.
+                  </p>
+                </div>
+              </div>
+
+              {/* Comparison Table */}
+              <div className="mt-16">
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-border">
+                    <thead>
+                      <tr className="bg-muted">
+                        <th className="border border-border p-4 text-left font-light">Özellik</th>
+                        <th className="border border-border p-4 text-center font-light">Freemium</th>
+                        <th className="border border-border p-4 text-center font-light">Premium</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-border p-4">Profil oluşturma</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Aylık Oyuncu Arama</td>
+                        <td className="border border-border p-4 text-center">10</td>
+                        <td className="border border-border p-4 text-center">Sınırsız</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Filtreleme</td>
+                        <td className="border border-border p-4 text-center">2</td>
+                        <td className="border border-border p-4 text-center">Sınırsız</td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Oyuncu favorileme</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Proje oluşturma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Yeni rol ilanı açma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Başvuru alma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
