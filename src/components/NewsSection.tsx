@@ -2,32 +2,31 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { Calendar, ArrowRight } from "lucide-react";
 import { Link } from "react-router-dom";
-
-const articles = [
-  {
-    title: "İlk Casting Çağrınıza Nasıl Hazırlanırsınız",
-    excerpt: "İlk profesyonel casting deneyimlerine hazırlanan oyuncular için önemli ipuçları ve tavsiyeler.",
-    date: "15 Mart 2024",
-    category: "Tavsiye",
-    readTime: "5 dk okuma",
-  },
-  {
-    title: "Tiyatroda Dijital Casting'in Geleceği",
-    excerpt: "Teknolojinin canlı performansta yetenek keşfetme ve seçme şeklimizde nasıl devrim yarattığını keşfedin.",
-    date: "10 Mart 2024",
-    category: "Sektör Haberleri",
-    readTime: "7 dk okuma",
-  },
-  {
-    title: "Profesyonel Oyunculuk Portfolyonuzu Oluşturma",
-    excerpt: "Casting yönetmenlerinin dikkatini çeken öne çıkan bir portfolyo oluşturmak için kapsamlı bir rehber.",
-    date: "5 Mart 2024",
-    category: "Tavsiye",
-    readTime: "6 dk okuma",
-  },
-];
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 const NewsSection = () => {
+  const { data: articles = [] } = useQuery({
+    queryKey: ["news"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("news")
+        .select("*")
+        .eq("published", true)
+        .order("date", { ascending: false })
+        .limit(3);
+      
+      if (error) throw error;
+      
+      return data.map(article => ({
+        title: article.title,
+        excerpt: article.excerpt,
+        date: new Date(article.date).toLocaleDateString('tr-TR', { day: 'numeric', month: 'long', year: 'numeric' }),
+        category: article.category,
+        readTime: article.read_time,
+      }));
+    },
+  });
   return (
     <section id="news" className="py-20 bg-muted/30">
       <div className="container">

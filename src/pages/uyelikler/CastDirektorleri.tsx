@@ -4,8 +4,13 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Button } from "@/components/ui/button";
 import { CheckCircle2 } from "lucide-react";
 import heroCastImage from "@/assets/Foto_castdire.jpg";
+import { usePricingPlans } from "@/hooks/usePricingPlans";
 
 const CastDirektorleri = () => {
+  const { data: plans = [] } = usePricingPlans("cast_directors");
+  const freemiumPlan = plans.find(p => p.plan_name === "freemium");
+  const premiumPlan = plans.find(p => p.plan_name === "premium");
+
   return (
     <div className="min-h-screen">
       <Navbar />
@@ -134,78 +139,61 @@ const CastDirektorleri = () => {
               
               <div className="grid md:grid-cols-2 gap-8">
                 {/* Freemium */}
-                <Card className="border-2 hover:border-primary/50 transition-colors">
-                  <CardHeader className="pb-8">
-                    <CardTitle className="text-2xl md:text-3xl font-light">Freemium</CardTitle>
-                    <CardDescription className="text-lg">
-                      <span className="text-4xl md:text-5xl font-light text-foreground">Ücretsiz</span>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Profil oluşturma</span>
+                {freemiumPlan && (
+                  <Card className="border-2 hover:border-primary/50 transition-colors">
+                    <CardHeader className="pb-8">
+                      <CardTitle className="text-2xl md:text-3xl font-light">Freemium</CardTitle>
+                      <CardDescription className="text-lg">
+                        <span className="text-4xl md:text-5xl font-light text-foreground">Ücretsiz</span>
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="space-y-4">
+                        {freemiumPlan.features.map((feature: string, idx: number) => (
+                          <div key={idx} className="flex items-start gap-3">
+                            <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-base">{feature}</span>
+                          </div>
+                        ))}
                       </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Aylık 5 arama hakkı</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Kısıtlı filtre</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Veritabanına kaydolma</span>
-                      </div>
-                    </div>
-                    <Button variant="outline" className="w-full" size="default">
-                      Hemen Üye Ol
-                    </Button>
-                  </CardContent>
-                </Card>
-
+                      <Button variant="outline" className="w-full">
+                        Hemen Üye Ol
+                      </Button>
+                    </CardContent>
+                  </Card>
+                )}
+                
                 {/* Premium */}
-                <Card className="border-2 border-primary relative shadow-lg">
-                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-medium">
-                    En Popüler
-                  </div>
-                  <CardHeader className="pb-8">
-                    <CardTitle className="text-2xl md:text-3xl font-light">Premium</CardTitle>
-                    <CardDescription className="text-lg">
-                      <span className="text-4xl md:text-5xl font-light text-foreground">₺499</span>
-                      <span className="text-muted-foreground">/ay</span>
-                    </CardDescription>
-                  </CardHeader>
-                  <CardContent className="space-y-6">
-                    <div className="space-y-4">
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Sınırsız oyuncu arama</span>
+                {premiumPlan && (
+                  <Card className="border-2 border-primary hover:border-primary/80 transition-colors shadow-lg">
+                    <CardHeader className="pb-8">
+                      <div className="inline-block px-3 py-1 rounded-full bg-primary text-primary-foreground text-xs font-medium mb-3 w-fit">
+                        ÖNERİLEN
                       </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Sınırsız filtre kullanımı</span>
+                      <CardTitle className="text-2xl md:text-3xl font-light">Premium</CardTitle>
+                      <CardDescription className="text-lg">
+                        {premiumPlan.price ? (
+                          <span className="text-4xl md:text-5xl font-light text-foreground">{premiumPlan.price} TL/ay</span>
+                        ) : (
+                          <span className="text-4xl md:text-5xl font-light text-foreground">İletişime Geç</span>
+                        )}
+                      </CardDescription>
+                    </CardHeader>
+                    <CardContent className="space-y-6">
+                      <div className="space-y-4">
+                        {premiumPlan.features.map((feature: string, idx: number) => (
+                          <div key={idx} className="flex items-start gap-3">
+                            <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                            <span className="text-base">{feature}</span>
+                          </div>
+                        ))}
                       </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Yeni rol ilanı açma</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Başvuru alma ve yönetme</span>
-                      </div>
-                      <div className="flex items-start gap-3">
-                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
-                        <span className="text-base">Proje oluşturma</span>
-                      </div>
-                    </div>
-                    <Button variant="contrastLight" className="w-full" size="lg">
-                      Hemen Üye Ol
-                    </Button>
-                  </CardContent>
-                </Card>
+                      <Button className="w-full">
+                        Hemen Üye Ol
+                      </Button>
+                    </CardContent>
+                  </Card>
+                )}
               </div>
             </div>
           </div>

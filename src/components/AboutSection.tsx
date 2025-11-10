@@ -1,12 +1,25 @@
 import { CheckCircle2 } from "lucide-react";
+import { useQuery } from "@tanstack/react-query";
+import { supabase } from "@/integrations/supabase/client";
 
 const AboutSection = () => {
-  const features = `Yeni rol fırsatları için ilanlar
-Profesyonel portfolyo vitrini
-Gelişmiş arama filtreleri
-Güncel ve doğru bilgiye erişim
-Yeni yetenek keşifleri
-Sadece sektör profesyonelleri`;
+  const { data: features = [] } = useQuery({
+    queryKey: ["about-features"],
+    queryFn: async () => {
+      const { data, error } = await supabase
+        .from("about_features")
+        .select("*")
+        .eq("active", true)
+        .order("display_order", { ascending: true });
+      
+      if (error) throw error;
+      return data;
+    },
+  });
+
+  const midPoint = Math.ceil(features.length / 2);
+  const firstColumn = features.slice(0, midPoint);
+  const secondColumn = features.slice(midPoint);
 
   return (
     <section id="about" className="py-20 bg-muted/30">
@@ -23,18 +36,18 @@ Sadece sektör profesyonelleri`;
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 ml-16">
-              {features.split('\n').slice(0, 3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {firstColumn.map((feature) => (
+                <div key={feature.id} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">{feature}</span>
+                  <span className="text-lg text-muted-foreground">{feature.feature_text}</span>
                 </div>
               ))}
             </div>
             <div className="space-y-4 ml-16">
-              {features.split('\n').slice(3).map((feature, index) => (
-                <div key={index} className="flex items-start gap-3">
+              {secondColumn.map((feature) => (
+                <div key={feature.id} className="flex items-start gap-3">
                   <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
-                  <span className="text-lg text-muted-foreground">{feature}</span>
+                  <span className="text-lg text-muted-foreground">{feature.feature_text}</span>
                 </div>
               ))}
             </div>
