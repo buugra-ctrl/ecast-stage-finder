@@ -155,7 +155,7 @@ const Menajerler = () => {
                         <span className="text-base">Temel arama ve filtreleme</span>
                       </div>
                     </div>
-                    <Button variant="outline" className="w-full" size="lg">
+                    <Button variant="outline" className="w-full" size="default">
                       Hemen Üye Ol
                     </Button>
                   </CardContent>
