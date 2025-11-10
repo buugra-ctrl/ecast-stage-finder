@@ -1,5 +1,6 @@
 import Logo from "./Logo";
 import { Link } from "react-router-dom";
+import { Twitter, Instagram, Youtube } from "lucide-react";
 
 const Footer = () => {
   return (
@@ -9,9 +10,6 @@ const Footer = () => {
           {/* Logo & Info */}
           <div className="space-y-4">
             <Logo scaleOnLoad={false} size="xlarge" />
-            <p className="text-sm opacity-90">
-              Türkiye'nin en kapsamlı casting platformu
-            </p>
           </div>
 
           {/* Üyelikler */}
@@ -74,6 +72,24 @@ const Footer = () => {
               </li>
             </ul>
           </div>
+        </div>
+
+        {/* Social Media */}
+        <div className="mt-12 text-center">
+          <div className="flex justify-center gap-6 mb-4">
+            <a href="#" className="hover:opacity-75 transition-opacity">
+              <Twitter className="h-6 w-6" />
+            </a>
+            <a href="#" className="hover:opacity-75 transition-opacity">
+              <Instagram className="h-6 w-6" />
+            </a>
+            <a href="#" className="hover:opacity-75 transition-opacity">
+              <Youtube className="h-6 w-6" />
+            </a>
+          </div>
+          <p className="text-sm opacity-90">
+            Türkiye'nin en kapsamlı cast sitesi
+          </p>
         </div>
 
         {/* Bottom */}
