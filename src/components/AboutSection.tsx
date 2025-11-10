@@ -1,4 +1,4 @@
-import { Eye } from "lucide-react";
+import { ChevronDown } from "lucide-react";
 
 const AboutSection = () => {
   const features = `Yeni rol fırsatları için ilanlar
@@ -25,7 +25,7 @@ Sadece sektör profesyonelleri`;
             <div className="space-y-4 ml-16">
               {features.split('\n').slice(0, 3).map((feature, index) => (
                 <div key={index} className="flex items-start gap-2">
-                  <Eye className="w-6 h-6" />
+                  <ChevronDown className="w-6 h-6" />
                   <span className="text-lg text-muted-foreground">{feature}</span>
                 </div>
               ))}
@@ -33,7 +33,7 @@ Sadece sektör profesyonelleri`;
             <div className="space-y-4 ml-16">
               {features.split('\n').slice(3).map((feature, index) => (
                 <div key={index} className="flex items-start gap-2">
-                  <Eye className="w-6 h-6" />
+                  <ChevronDown className="w-6 h-6" />
                   <span className="text-lg text-muted-foreground">{feature}</span>
                 </div>
               ))}
