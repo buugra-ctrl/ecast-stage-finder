@@ -22,29 +22,12 @@ const CastDirektorleri = () => {
           </div>
           <div className="container relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8">
-                Sektörün En İyileriyle Çalışın
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8">
+                İşini dijitale taşı, hem zaman hem verim kazan!
               </h1>
-              <Button size="lg" variant="contrastDark" className="shadow-lg">
-                Hemen Üye Ol
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-5xl font-light text-foreground">
-                Aradığınız Yüzü Bulmaya Hazır mısınız?
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Hemen üye olun, Türkiye'nin en geniş profesyonel oyuncu veri tabanına erişin ve projeniz için en doğru yeteneği saniyeler içinde bulun.
+              <p className="text-lg md:text-xl text-white/90 leading-relaxed">
+                ecast ile oyuncu arama, değerlendirme ve seçme süreçlerini tek platformdan yönet. Kapsamlı arama filtreleri, portfolyo görüntüleme ve favori listeleriyle süreçlerini hızlandır.
               </p>
-              <Button size="lg" variant="contrastLight" className="mt-8">
-                Hemen Üye Ol
-              </Button>
             </div>
           </div>
         </section>
@@ -54,26 +37,87 @@ const CastDirektorleri = () => {
           <div className="container">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-light text-center mb-16">
-                Neden Bu Platform?
+                İş Akışınızı Kolaylaştırın
               </h2>
-              
-              <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-4">
+
+              <div className="grid md:grid-cols-1 gap-12">
+                <div className="space-y-6">
                   <h3 className="text-2xl md:text-3xl font-light text-foreground">
-                    Sadece Profesyonellerle Çalışın
+                    Gelişmiş Arama ve Filtreleme
                   </h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Platformumuz, sektör profesyonellerini bir araya getirme misyonuyla çalışır. Tüm oyuncu ve menajer profilleri, gerçek ve aktif profesyonellerden oluşur. Zamanınızı doğrulanmamış profillerle harcamayın.
+                    Doğrulanmış, sadece profesyonel oyuncular arasından yaş, deneyim, eğitim, rol tipi ve hatta aksan gibi onlarca filtreyle arama yap. Aradığın profile saniyeler içinde ulaş.
                   </p>
                 </div>
 
-                <div className="space-y-4">
+                <div className="space-y-6">
                   <h3 className="text-2xl md:text-3xl font-light text-foreground">
-                    Aradığınız Her Şey Tek Yerde
+                    Detaylı Oyuncu Profilleri
                   </h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Gelişmiş filtreleme seçenekleriyle oyuncuları anında listeleyin, yeni rol ilanları açın, başvuruları yönetin ve tüm projelerinizi tek bir panelden kolayca takip edin.
+                    Her oyuncunun portfolyosunu, audition videolarını, ajans bilgisini ve geçmiş işlerini tek ekranda görüntüle. Karar sürecinde zaman kaybetmeden doğru seçimi yap.
                   </p>
+                </div>
+
+                <div className="space-y-6">
+                  <h3 className="text-2xl md:text-3xl font-light text-foreground">
+                    Favori Listeleri ve Notlar
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Beğendiğin profilleri favorilerine ekle, kişisel notlar al ve projene özel listeler oluştur. Tüm süreçleri düzenli ve profesyonel bir şekilde yönet.
+                  </p>
+                </div>
+              </div>
+
+              {/* Comparison Table */}
+              <div className="mt-16">
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-border">
+                    <thead>
+                      <tr className="bg-muted">
+                        <th className="border border-border p-4 text-left font-light">Özellik</th>
+                        <th className="border border-border p-4 text-center font-light">Freemium</th>
+                        <th className="border border-border p-4 text-center font-light">Premium</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-border p-4">Profil oluşturma</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Aylık Oyuncu Arama</td>
+                        <td className="border border-border p-4 text-center">10</td>
+                        <td className="border border-border p-4 text-center">Sınırsız</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Filtreleme</td>
+                        <td className="border border-border p-4 text-center">2</td>
+                        <td className="border border-border p-4 text-center">Sınırsız</td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Oyuncu favorileme</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Proje oluşturma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Yeni rol ilanı açma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Başvuru alma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
