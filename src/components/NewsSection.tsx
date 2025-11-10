@@ -69,7 +69,7 @@ const NewsSection = () => {
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-[#002b54] hover:bg-transparent hover:text-[#00579e] hover:underline active:text-[#004884] active:underline rounded-none">
+                <Button variant="ghost" className="group/btn p-0 h-auto font-semibold text-[#002b54] hover:bg-transparent hover:text-[#00579e] hover:border-b hover:border-[#002b54] active:text-[#004884] active:border-b active:border-[#002b54] rounded-none">
                   Devamını Oku
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
                 </Button>
