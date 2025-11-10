@@ -14,7 +14,114 @@ export type Database = {
   }
   public: {
     Tables: {
-      [_ in never]: never
+      about_features: {
+        Row: {
+          active: boolean | null
+          created_at: string
+          display_order: number | null
+          feature_text: string
+          id: string
+          updated_at: string
+        }
+        Insert: {
+          active?: boolean | null
+          created_at?: string
+          display_order?: number | null
+          feature_text: string
+          id?: string
+          updated_at?: string
+        }
+        Update: {
+          active?: boolean | null
+          created_at?: string
+          display_order?: number | null
+          feature_text?: string
+          id?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      news: {
+        Row: {
+          category: string
+          content: string | null
+          created_at: string
+          date: string
+          excerpt: string
+          id: string
+          image_url: string | null
+          published: boolean | null
+          read_time: string
+          slug: string | null
+          title: string
+          updated_at: string
+        }
+        Insert: {
+          category: string
+          content?: string | null
+          created_at?: string
+          date?: string
+          excerpt: string
+          id?: string
+          image_url?: string | null
+          published?: boolean | null
+          read_time: string
+          slug?: string | null
+          title: string
+          updated_at?: string
+        }
+        Update: {
+          category?: string
+          content?: string | null
+          created_at?: string
+          date?: string
+          excerpt?: string
+          id?: string
+          image_url?: string | null
+          published?: boolean | null
+          read_time?: string
+          slug?: string | null
+          title?: string
+          updated_at?: string
+        }
+        Relationships: []
+      }
+      pricing_plans: {
+        Row: {
+          created_at: string
+          display_order: number | null
+          features: string[]
+          id: string
+          is_highlighted: boolean | null
+          plan_name: string
+          plan_type: string
+          price: number | null
+          updated_at: string
+        }
+        Insert: {
+          created_at?: string
+          display_order?: number | null
+          features: string[]
+          id?: string
+          is_highlighted?: boolean | null
+          plan_name: string
+          plan_type: string
+          price?: number | null
+          updated_at?: string
+        }
+        Update: {
+          created_at?: string
+          display_order?: number | null
+          features?: string[]
+          id?: string
+          is_highlighted?: boolean | null
+          plan_name?: string
+          plan_type?: string
+          price?: number | null
+          updated_at?: string
+        }
+        Relationships: []
+      }
     }
     Views: {
       [_ in never]: never
