@@ -91,9 +91,6 @@ const Navbar = () => {
                 <Link to="/haberler" className="text-sm font-normal text-[#002b54] hover:text-[#00579e] hover:underline active:text-[#004884] active:underline transition-colors duration-200">
                   Haberler & Tavsiyeler
                 </Link>
-                <a href="#faq" className="text-sm font-normal text-[#002b54] hover:text-[#00579e] hover:underline active:text-[#004884] active:underline transition-colors duration-200">
-                  SSS
-                </a>
                 <Link to="/iletisim" className="text-sm font-normal text-[#002b54] hover:text-[#00579e] hover:underline active:text-[#004884] active:underline transition-colors duration-200">
                   İletişim
                 </Link>
@@ -148,9 +145,6 @@ const Navbar = () => {
               <>
                 <a href="#about" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
                   Hakkımızda
-                </a>
-                <a href="#faq" className="text-sm font-medium text-white hover:text-gray-200 transition-colors duration-200">
-                  SSS
                 </a>
               </>
             ) : (
