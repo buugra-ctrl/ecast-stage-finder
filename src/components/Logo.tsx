@@ -6,7 +6,7 @@ interface LogoProps {
   scaleOnLoad?: boolean;
   scaleOnHover?: boolean;
   scaleMultiplier?: number;
-  size?: 'default' | 'large';
+  size?: 'default' | 'large' | 'xlarge';
 }
 
 const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleMultiplier = 1.25, size = 'default' }: LogoProps) => {
@@ -34,7 +34,7 @@ const Logo = ({ className = "", scaleOnLoad = true, scaleOnHover = false, scaleM
     }
   };
 
-  const sizeClasses = size === 'large' ? 'h-36 w-36' : 'h-28 w-28';
+  const sizeClasses = size === 'large' ? 'h-36 w-36' : size === 'xlarge' ? 'h-16 w-16' : 'h-28 w-28';
 
   return (
     <div
