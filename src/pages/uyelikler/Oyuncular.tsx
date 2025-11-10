@@ -22,29 +22,9 @@ const Oyuncular = () => {
           </div>
           <div className="container relative z-10">
             <div className="max-w-2xl">
-              <h1 className="text-4xl md:text-6xl lg:text-7xl font-light text-white mb-8">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8">
                 Kariyerini Keşfedilmeye Aç
               </h1>
-              <Button size="lg" variant="contrastDark" className="shadow-lg">
-                Hemen Üye Ol
-              </Button>
-            </div>
-          </div>
-        </section>
-
-        {/* CTA Section */}
-        <section className="py-16 md:py-24 bg-background">
-          <div className="container">
-            <div className="max-w-3xl mx-auto text-center space-y-6">
-              <h2 className="text-3xl md:text-5xl font-light text-foreground">
-                Kariyerini Parlatmaya Hazır mısın?
-              </h2>
-              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed">
-                Hemen üye ol, profesyonel profilini oluştur ve Türkiye'nin önde gelen cast direktörleri ile menajerlerinin seni keşfetmesini sağla.
-              </p>
-              <Button size="lg" variant="contrastLight" className="mt-8">
-                Hemen Üye Ol
-              </Button>
             </div>
           </div>
         </section>
@@ -54,37 +34,86 @@ const Oyuncular = () => {
           <div className="container">
             <div className="max-w-5xl mx-auto">
               <h2 className="text-3xl md:text-5xl font-light text-center mb-16">
-                Neden Bu Platform?
+                Yeteneğini Görünür Kıl
               </h2>
-              
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                Profilini oluştur, portfolyonu yükle ve Türkiye'nin önde gelen cast direktörleri ve menajerler tarafından keşfedil. ecast, seni projelere bir adım daha yaklaştırır.
+              </p>
+
               <div className="grid md:grid-cols-2 gap-12">
-                <div className="space-y-6">
+                <div className="space-y-4">
                   <h3 className="text-2xl md:text-3xl font-light text-foreground">
-                    Sana Sunulan Avantajlar
+                    Sadece sektör Profesyonelleri
                   </h3>
-                  <div className="space-y-4">
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base md:text-lg">Profilini en iyi cast direktörlerine sun.</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base md:text-lg">Sadece doğrulanmış profesyonel projelere başvur.</span>
-                    </div>
-                    <div className="flex items-start gap-3">
-                      <CheckCircle2 className="h-6 w-6 text-primary flex-shrink-0 mt-0.5" />
-                      <span className="text-base md:text-lg">Başvurularını tek bir panelden kolayca takip et.</span>
-                    </div>
-                  </div>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    ecast, yalnızca sektör profesyonellerine açık, doğrulanmış bir platformdur. Burada oyuncular yeteneklerini güvenle sergiler, cast direktörleri ise doğru isimleri kolayca keşfeder.
+                  </p>
                 </div>
 
                 <div className="space-y-4">
                   <h3 className="text-2xl md:text-3xl font-light text-foreground">
-                    Sadece Sektör Profesyonelleri
+                    Kariyer Yönetimi ve Geliştirici İçerikler
                   </h3>
                   <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
-                    Platformumuz, sektör profesyonellerini bir araya getirme misyonuyla çalışır. Bu sayede, başvurularının gerçek ve ciddi projeler için değerlendirildiğinden emin olabilirsin.
+                    Audition videolarını, referanslarını ve tüm bilgilerini profesyonel bir profil altında topla. ecast, sektöre dair eğitici içerikler ve ipuçlarıyla oyunculuk kariyerini geliştirmeni de sağlar.
                   </p>
+                </div>
+              </div>
+
+              {/* Comparison Table */}
+              <div className="mt-16">
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-border">
+                    <thead>
+                      <tr className="bg-muted">
+                        <th className="border border-border p-4 text-left font-light">Özellik</th>
+                        <th className="border border-border p-4 text-center font-light">Freemium</th>
+                        <th className="border border-border p-4 text-center font-light">Premium</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-border p-4">Profil oluşturma</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Profil linki oluşturma</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Görsel Ekleme</td>
+                        <td className="border border-border p-4 text-center">2</td>
+                        <td className="border border-border p-4 text-center">8</td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Video Ekleme</td>
+                        <td className="border border-border p-4 text-center">1</td>
+                        <td className="border border-border p-4 text-center">4</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Cast Direkt. Aramalarında listelenme</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Menajerler tarafından görüntülenme</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Rol ilanlarını görüntüleme</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Rol ilanlarına başvurma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
                 </div>
               </div>
             </div>
@@ -133,7 +162,7 @@ const Oyuncular = () => {
                   <CardHeader className="pb-8">
                     <CardTitle className="text-2xl md:text-3xl font-light">Premium</CardTitle>
                     <CardDescription className="text-lg">
-                      <span className="text-4xl md:text-5xl font-light text-foreground">₺99</span>
+                      <span className="text-4xl md:text-5xl font-light text-foreground">₺299</span>
                       <span className="text-muted-foreground">/ay</span>
                     </CardDescription>
                   </CardHeader>
