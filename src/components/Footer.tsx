@@ -1,114 +1,203 @@
-import Logo from "./Logo";
-import { Link } from "react-router-dom";
-import { Twitter, Instagram, Youtube } from "lucide-react";
+import Navbar from "@/components/Navbar";
+import Footer from "@/components/Footer";
+import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
+import { Button } from "@/components/ui/button";
+import { CheckCircle2 } from "lucide-react";
+import heroOyuncuImage from "@/assets/Foto_oyuncu.jpg";
 
-const Footer = () => {
+const Oyuncular = () => {
   return (
-    <footer className="bg-muted/30">
-      <div className="container py-12 md:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
-          {/* Logo & Info */}
-          <div className="flex flex-col justify-between h-full">
-            <Link to="/">
-              <Logo scaleOnLoad={false} size="default" />
-            </Link>
-            <div>
-              <div className="flex justify-center gap-6 mb-4">
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <Twitter className="h-4 w-4" />
-                </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <Instagram className="h-4 w-4" />
-                </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <Youtube className="h-4 w-4" />
-                </a>
-              </div>
-              <p className="text-sm opacity-90 text-center">
-                Türkiye'nin en kapsamlı cast sitesi
+    <div className="min-h-screen">
+      <Navbar />
+      <main>
+        {/* Hero Banner */}
+        <section className="relative h-[500px] md:h-[600px] flex items-center overflow-hidden">
+          <div className="absolute inset-0">
+            <img 
+              src={heroOyuncuImage} 
+              alt="Oyuncular" 
+              className="w-full h-full object-cover"
+            />
+            <div className="absolute inset-0 bg-gradient-to-r from-primary/90 via-primary/60 to-transparent" />
+          </div>
+          <div className="container relative z-10">
+            <div className="max-w-2xl">
+              <h1 className="text-3xl md:text-5xl lg:text-6xl font-light text-white mb-8">
+                Kariyerini Keşfedilmeye Aç
+              </h1>
+            </div>
+          </div>
+        </section>
+
+        {/* Bilgilendirme Section */}
+        <section className="py-16 md:py-24 bg-muted/30">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-light text-center mb-16">
+                Yeteneğini Görünür Kıl
+              </h2>
+              <p className="text-lg md:text-xl text-muted-foreground leading-relaxed text-center mb-12">
+                Profilini oluştur, portfolyonu yükle ve Türkiye'nin önde gelen cast direktörleri ve menajerler tarafından keşfedil. ecast, seni projelere bir adım daha yaklaştırır.
               </p>
+
+              <div className="grid md:grid-cols-2 gap-12">
+                <div className="space-y-4">
+                  <h3 className="text-2xl md:text-3xl font-light text-foreground">
+                    Sadece sektör Profesyonelleri
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    ecast, yalnızca sektör profesyonellerine açık, doğrulanmış bir platformdur. Burada oyuncular yeteneklerini güvenle sergiler, cast direktörleri ise doğru isimleri kolayca keşfeder.
+                  </p>
+                </div>
+
+                <div className="space-y-4">
+                  <h3 className="text-2xl md:text-3xl font-light text-foreground">
+                    Kariyer Yönetimi ve Geliştirici İçerikler
+                  </h3>
+                  <p className="text-base md:text-lg text-muted-foreground leading-relaxed">
+                    Audition videolarını, referanslarını ve tüm bilgilerini profesyonel bir profil altında topla. ecast, sektöre dair eğitici içerikler ve ipuçlarıyla oyunculuk kariyerini geliştirmeni de sağlar.
+                  </p>
+                </div>
+              </div>
+
+              {/* Comparison Table */}
+              <div className="mt-16">
+                <div className="overflow-x-auto">
+                  <table className="w-full border-collapse border border-border">
+                    <thead>
+                      <tr className="bg-muted">
+                        <th className="border border-border p-4 text-left font-light">Özellik</th>
+                        <th className="border border-border p-4 text-center font-light">Freemium</th>
+                        <th className="border border-border p-4 text-center font-light">Premium</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      <tr>
+                        <td className="border border-border p-4">Profil oluşturma</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Profil linki oluşturma</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Görsel Ekleme</td>
+                        <td className="border border-border p-4 text-center">2</td>
+                        <td className="border border-border p-4 text-center">8</td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Video Ekleme</td>
+                        <td className="border border-border p-4 text-center">1</td>
+                        <td className="border border-border p-4 text-center">4</td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Cast Direkt. Aramalarında listelenme</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Menajerler tarafından görüntülenme</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr>
+                        <td className="border border-border p-4">Rol ilanlarını görüntüleme</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                      <tr className="bg-muted/30">
+                        <td className="border border-border p-4">Rol ilanlarına başvurma</td>
+                        <td className="border border-border p-4 text-center">✕</td>
+                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                      </tr>
+                    </tbody>
+                  </table>
+                </div>
+              </div>
             </div>
           </div>
+        </section>
 
-          {/* Üyelikler */}
-          <div>
-            <h3 className="font-taviraj text-lg mb-4">Üyelikler</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/uyelikler/cast-direktorleri" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  Cast Direktörleri
-                </Link>
-              </li>
-              <li>
-                <Link to="/uyelikler/oyuncular" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  Oyuncular
-                </Link>
-              </li>
-              <li>
-                <Link to="/uyelikler/menajerler" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  Menajerler
-                </Link>
-              </li>
-            </ul>
-          </div>
+        {/* Pricing Section */}
+        <section className="py-16 md:py-24 bg-background">
+          <div className="container">
+            <div className="max-w-5xl mx-auto">
+              <h2 className="text-3xl md:text-5xl font-light text-center mb-16">
+                Üyelik Seçenekleri
+              </h2>
+              
+              <div className="grid md:grid-cols-2 gap-8">
+                {/* Freemium */}
+                <Card className="border-2 hover:border-primary/50 transition-colors">
+                  <CardHeader className="pb-8">
+                    <CardTitle className="text-2xl md:text-3xl font-light">Freemium</CardTitle>
+                    <CardDescription className="text-lg">
+                      <span className="text-4xl md:text-5xl font-light text-foreground">Ücretsiz</span>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-base">Profil oluşturma</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-base">2 adet resim koyma hakkı</span>
+                      </div>
+                    </div>
+                    <Button variant="outline" className="w-full" size="default">
+                      Hemen Üye Ol
+                    </Button>
+                  </CardContent>
+                </Card>
 
-          {/* Kurumsal */}
-          <div>
-            <h3 className="font-taviraj text-lg mb-4">Kurumsal</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <Link to="/hakkimizda" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  Hakkımızda
-                </Link>
-              </li>
-              <li>
-                <Link to="/haberler" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  Haberler & Tavsiyeler
-                </Link>
-              </li>
-              <li>
-                <Link to="/iletisim" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  İletişim
-                </Link>
-              </li>
-            </ul>
-          </div>
-
-          {/* Destek */}
-          <div>
-            <h3 className="font-taviraj text-lg mb-4">Destek</h3>
-            <ul className="space-y-2 text-sm">
-              <li>
-                <a href="#faq" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  SSS
-                </a>
-              </li>
-              <li>
-                <Link to="/iletisim" className="hover:underline opacity-90 hover:opacity-100 transition-opacity">
-                  Yardım Merkezi
-                </Link>
-              </li>
-            </ul>
-          </div>
-        </div>
-
-        {/* Bottom */}
-        <div className="mt-12 pt-8 border-t border-border">
-          <div className="flex flex-col md:flex-row justify-between items-center gap-4 text-sm opacity-75">
-            <p>&copy; 2024 ecast. Tüm hakları saklıdır.</p>
-            <div className="flex gap-6">
-              <a href="#" className="hover:underline hover:opacity-100 transition-opacity">
-                Gizlilik Politikası
-              </a>
-              <a href="#" className="hover:underline hover:opacity-100 transition-opacity">
-                Kullanım Koşulları
-              </a>
+                {/* Premium */}
+                <Card className="border-2 border-primary relative shadow-lg">
+                  <div className="absolute -top-4 left-1/2 -translate-x-1/2 bg-primary text-primary-foreground px-6 py-2 rounded-full text-sm font-medium">
+                    En Popüler
+                  </div>
+                  <CardHeader className="pb-8">
+                    <CardTitle className="text-2xl md:text-3xl font-light">Premium</CardTitle>
+                    <CardDescription className="text-lg">
+                      <span className="text-4xl md:text-5xl font-light text-foreground">₺299</span>
+                      <span className="text-muted-foreground">/ay</span>
+                    </CardDescription>
+                  </CardHeader>
+                  <CardContent className="space-y-6">
+                    <div className="space-y-4">
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-base">6 resim</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-base">3 video</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-base">İlanları görüntüleme</span>
+                      </div>
+                      <div className="flex items-start gap-3">
+                        <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                        <span className="text-base">Başvuru yapma ve takip etme</span>
+                      </div>
+                    </div>
+                    <Button variant="contrastLight" className="w-full" size="lg">
+                      Hemen Üye Ol
+                    </Button>
+                  </CardContent>
+                </Card>
+              </div>
             </div>
           </div>
-        </div>
-      </div>
-    </footer>
+        </section>
+      </main>
+      <Footer />
+    </div>
   );
 };
 
-export default Footer;
+export default Oyuncular;
