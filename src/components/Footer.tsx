@@ -9,7 +9,21 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo & Info */}
           <div className="space-y-4">
-            <Logo scaleOnLoad={false} size="xlarge" />
+            <Logo scaleOnLoad={false} size="large" />
+            <div className="flex justify-center gap-6">
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <Youtube className="h-4 w-4" />
+              </a>
+            </div>
+            <p className="text-sm opacity-90 text-center">
+              Türkiye'nin en kapsamlı cast sitesi
+            </p>
           </div>
 
           {/* Üyelikler */}
@@ -72,24 +86,6 @@ const Footer = () => {
               </li>
             </ul>
           </div>
-        </div>
-
-        {/* Social Media */}
-        <div className="mt-12 text-center">
-          <div className="flex justify-center gap-6 mb-4">
-            <a href="#" className="hover:opacity-75 transition-opacity">
-              <Twitter className="h-6 w-6" />
-            </a>
-            <a href="#" className="hover:opacity-75 transition-opacity">
-              <Instagram className="h-6 w-6" />
-            </a>
-            <a href="#" className="hover:opacity-75 transition-opacity">
-              <Youtube className="h-6 w-6" />
-            </a>
-          </div>
-          <p className="text-sm opacity-90">
-            Türkiye'nin en kapsamlı cast sitesi
-          </p>
         </div>
 
         {/* Bottom */}
