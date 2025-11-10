@@ -8,25 +8,23 @@ const Footer = () => {
       <div className="container py-12 md:py-16">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo & Info */}
-          <div className="flex flex-col justify-between h-full">
+          <div className="space-y-4">
             <Link to="/">
               <Logo scaleOnLoad={false} size="default" />
             </Link>
-            <div>
-              <div className="flex justify-center gap-6 mb-4">
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <Twitter className="h-4 w-4" />
-                </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <Instagram className="h-4 w-4" />
-                </a>
-                <a href="#" className="hover:opacity-75 transition-opacity">
-                  <Youtube className="h-4 w-4" />
-                </a>
-              </div>
-              <p className="text-sm opacity-90 text-center">
-                Türkiye'nin en kapsamlı cast sitesi
-              </p>
+            <p className="text-sm opacity-90">
+              Türkiye'nin en kapsamlı cast sitesi
+            </p>
+            <div className="flex gap-4">
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <Twitter className="h-4 w-4" />
+              </a>
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <Instagram className="h-4 w-4" />
+              </a>
+              <a href="#" className="hover:opacity-75 transition-opacity">
+                <Youtube className="h-4 w-4" />
+              </a>
             </div>
           </div>
 
