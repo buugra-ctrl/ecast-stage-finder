@@ -160,7 +160,7 @@ const CastDirektorleri = () => {
                         <span className="text-base">Veritabanına kaydolma</span>
                       </div>
                     </div>
-                    <Button variant="outline" className="w-full" size="lg">
+                    <Button variant="outline" className="w-full" size="default">
                       Hemen Üye Ol
                     </Button>
                   </CardContent>
