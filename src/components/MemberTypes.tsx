@@ -53,7 +53,7 @@ const MemberTypes = () => {
           {memberTypes.map((type, index) => {
             const Icon = type.icon;
             return (
-              <Card key={index} className="bg-[#002b54] border-white text-white min-h-full flex flex-col">
+              <Card key={index} className="bg-[#002b54] border border-[rgba(0,43,84,0.04)] rounded-tl-[40px] rounded-tr-[4px] rounded-br-[24px] rounded-bl-[24px] drop-shadow-[0px_4px_16px_rgba(117,140,162,0.1)] text-white min-h-full flex flex-col w-[290px] h-[347px]">
                 <CardHeader>
                   <div className="w-12 h-12 rounded-lg bg-white/10 flex items-center justify-center mb-4">
                     <Icon className="h-6 w-6 text-white" />
