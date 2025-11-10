@@ -1,8 +1,8 @@
-import lifeCheckImage from "@/assets/life_ceckk.png";
+import { Eye } from "lucide-react";
 
 const AboutSection = () => {
-  const features = `Profesyonel profil yönetimi ve portfolyo vitrini
-Yeni fırsatlar için anlık bildirimler
+  const features = `Yeni rol fırsatları için ilanlar
+Profesyonel portfolyo vitrini
 Gelişmiş arama filtreleri
 Güncel ve doğru bilgiye erişim
 Yeni yetenek keşifleri
@@ -25,7 +25,7 @@ Sadece sektör profesyonelleri`;
             <div className="space-y-4 ml-16">
               {features.split('\n').slice(0, 3).map((feature, index) => (
                 <div key={index} className="flex items-start gap-2">
-                  <img src={lifeCheckImage} alt="check" className="w-5 h-5" />
+                  <Eye className="w-6 h-6" />
                   <span className="text-lg text-muted-foreground">{feature}</span>
                 </div>
               ))}
@@ -33,7 +33,7 @@ Sadece sektör profesyonelleri`;
             <div className="space-y-4 ml-16">
               {features.split('\n').slice(3).map((feature, index) => (
                 <div key={index} className="flex items-start gap-2">
-                  <img src={lifeCheckImage} alt="check" className="w-5 h-5" />
+                  <Eye className="w-6 h-6" />
                   <span className="text-lg text-muted-foreground">{feature}</span>
                 </div>
               ))}
