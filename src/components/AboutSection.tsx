@@ -1,4 +1,4 @@
-import { CheckCircle2 } from "lucide-react";
+import checkIcon from "@/assets/check-icon.png";
 import { useQuery } from "@tanstack/react-query";
 import { supabase } from "@/integrations/supabase/client";
 
@@ -38,7 +38,7 @@ const AboutSection = () => {
             <div className="space-y-4 ml-16">
               {firstColumn.map((feature) => (
                 <div key={feature.id} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <img src={checkIcon} alt="check" className="w-5 h-5 flex-shrink-0 mt-1" />
                   <span className="text-lg text-muted-foreground">{feature.feature_text}</span>
                 </div>
               ))}
@@ -46,7 +46,7 @@ const AboutSection = () => {
             <div className="space-y-4 ml-16">
               {secondColumn.map((feature) => (
                 <div key={feature.id} className="flex items-start gap-3">
-                  <CheckCircle2 className="w-5 h-5 text-primary flex-shrink-0 mt-1" />
+                  <img src={checkIcon} alt="check" className="w-5 h-5 flex-shrink-0 mt-1" />
                   <span className="text-lg text-muted-foreground">{feature.feature_text}</span>
                 </div>
               ))}

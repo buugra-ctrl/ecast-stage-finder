@@ -2,7 +2,7 @@ import Navbar from "@/components/Navbar";
 import Footer from "@/components/Footer";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { CheckCircle2 } from "lucide-react";
+import checkIcon from "@/assets/check-icon.png";
 import heroCastImage from "@/assets/Foto_castdire.jpg";
 import { usePricingPlans } from "@/hooks/usePricingPlans";
 
@@ -88,8 +88,8 @@ const CastDirektorleri = () => {
                     <tbody>
                       <tr>
                         <td className="border border-border p-4">Profil oluşturma</td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
                       </tr>
                       <tr className="bg-muted/30">
                         <td className="border border-border p-4">Aylık Oyuncu Arama</td>
@@ -103,23 +103,23 @@ const CastDirektorleri = () => {
                       </tr>
                       <tr className="bg-muted/30">
                         <td className="border border-border p-4">Oyuncu favorileme</td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
                       </tr>
                       <tr>
                         <td className="border border-border p-4">Proje oluşturma</td>
                         <td className="border border-border p-4 text-center">✕</td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
                       </tr>
                       <tr className="bg-muted/30">
                         <td className="border border-border p-4">Yeni rol ilanı açma</td>
                         <td className="border border-border p-4 text-center">✕</td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
                       </tr>
                       <tr>
                         <td className="border border-border p-4">Başvuru alma</td>
                         <td className="border border-border p-4 text-center">✕</td>
-                        <td className="border border-border p-4 text-center"><CheckCircle2 className="h-5 w-5 text-primary mx-auto" /></td>
+                        <td className="border border-border p-4 text-center"><img src={checkIcon} alt="check" className="h-5 w-5 mx-auto" /></td>
                       </tr>
                     </tbody>
                   </table>
@@ -151,7 +151,7 @@ const CastDirektorleri = () => {
                       <div className="space-y-4">
                         {freemiumPlan.features.map((feature: string, idx: number) => (
                           <div key={idx} className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                            <img src={checkIcon} alt="check" className="h-5 w-5 flex-shrink-0 mt-0.5" />
                             <span className="text-base">{feature}</span>
                           </div>
                         ))}
@@ -183,7 +183,7 @@ const CastDirektorleri = () => {
                       <div className="space-y-4">
                         {premiumPlan.features.map((feature: string, idx: number) => (
                           <div key={idx} className="flex items-start gap-3">
-                            <CheckCircle2 className="h-5 w-5 text-primary flex-shrink-0 mt-0.5" />
+                            <img src={checkIcon} alt="check" className="h-5 w-5 flex-shrink-0 mt-0.5" />
                             <span className="text-base">{feature}</span>
                           </div>
                         ))}
