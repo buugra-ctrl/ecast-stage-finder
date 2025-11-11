@@ -34,7 +34,7 @@ const Navbar = () => {
       <nav ref={navRef} className="container flex h-full items-center justify-between px-4">
         <div className="flex items-center gap-6">
           <a href="/">
-            <Logo />
+            <Logo size="small" />
           </a>
 
           <div className="hidden md:flex gap-6 items-center">

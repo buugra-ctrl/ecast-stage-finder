@@ -9,8 +9,8 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 md:gap-12">
           {/* Logo & Info */}
           <div className="space-y-4">
-            <Link to="/">
-              <Logo size="default" />
+            <Link to="/" className="-mt-3 inline-block">
+              <Logo size="small" />
             </Link>
             <p className="text-sm opacity-90">
               Türkiye'nin en kapsamlı cast sitesi
