@@ -16,14 +16,14 @@ const Footer = () => {
               Türkiye'nin en kapsamlı cast sitesi
             </p>
             <div className="flex gap-4">
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <Twitter className="h-4 w-4" />
+              <a href="#" className="hover:text-primary transition-colors">
+                <Twitter className="h-5 w-5" strokeWidth={1.5} />
               </a>
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <Instagram className="h-4 w-4" />
+              <a href="#" className="hover:text-primary transition-colors">
+                <Instagram className="h-5 w-5" strokeWidth={1.5} />
               </a>
-              <a href="#" className="hover:opacity-75 transition-opacity">
-                <Youtube className="h-4 w-4" />
+              <a href="#" className="hover:text-primary transition-colors">
+                <Youtube className="h-5 w-5" strokeWidth={1.5} />
               </a>
             </div>
           </div>
