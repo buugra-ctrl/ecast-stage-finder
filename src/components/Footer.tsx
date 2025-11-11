@@ -10,7 +10,7 @@ const Footer = () => {
           {/* Logo & Info */}
           <div className="space-y-4">
             <Link to="/">
-              <Logo scaleOnLoad={false} size="default" />
+              <Logo size="default" />
             </Link>
             <p className="text-sm opacity-90">
               Türkiye'nin en kapsamlı cast sitesi

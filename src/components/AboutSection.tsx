@@ -34,13 +34,13 @@ const AboutSection = () => {
         <div className="max-w-4xl mx-auto">
           <div className="grid md:grid-cols-2 gap-8">
             <div className="space-y-4 ml-16">
-              {firstColumn.map(feature => <div key={feature.id} className="flex items-start gap-3 mx-[20px]">
+              {firstColumn.map(feature => <div key={feature.id} className="flex items-start gap-2 mx-[20px]">
                   <img src={checkIcon} alt="check" className="w-5 h-5 flex-shrink-0 mt-1" />
                   <span className="text-lg text-muted-foreground px-0 mx-0">{feature.feature_text}</span>
                 </div>)}
             </div>
             <div className="space-y-4 ml-16">
-              {secondColumn.map(feature => <div key={feature.id} className="flex items-start gap-3">
+              {secondColumn.map(feature => <div key={feature.id} className="flex items-start gap-2">
                   <img src={checkIcon} alt="check" className="w-5 h-5 flex-shrink-0 mt-1" />
                   <span className="text-lg text-muted-foreground">{feature.feature_text}</span>
                 </div>)}
